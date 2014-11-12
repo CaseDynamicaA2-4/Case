@@ -69,9 +69,9 @@ Joren \textsc{Dhont} % Your name
 %----------------------------------------------------------------------------------------
 %	LOGO SECTION
 %----------------------------------------------------------------------------------------
-
-%\includegraphics{Logo}\\[1cm] % Include a department/university logo - this will require the graphicx package
- 
+\begin{center}
+\includegraphics{Logo.png}\\[1cm] % Include a department/university logo - this will require the graphicx package
+\end{center}
 %----------------------------------------------------------------------------------------
 
 \vfill % Fill the rest of the page with whitespace
@@ -83,14 +83,14 @@ Joren \textsc{Dhont} % Your name
 \fancyfoot[R]{\thepage}
 \section{Kinematica}
 \subsection{Transformatiematrices}
-$T_{1}$ van x'y'z' (en dus ook van x" y" z") naar xyz:\\
+$T_{1}$ van x'y'z' (en dus ook van x''y''z'') naar xyz:\\
 $T_{1}$ =
 $\begin{bmatrix}
 	1 & 0 & 0 \\
 	0 & \cos(\alpha) & -\sin(\alpha) \\
 	0 & \sin(\alpha) & \cos(\alpha)
 \end{bmatrix}$\\\\
-$T_{2}$ van x"'y"'z"' naar x"y"z": \\
+$T_{2}$ van x'''y'''z''' naar x''y''z'': \\
 $T_{2}$ =
 $\begin{bmatrix}
 	\cos(\beta) & 0 & \sin(\beta) \\
@@ -100,11 +100,17 @@ $\begin{bmatrix}
 \subsection{Vraag 1}
 \textbf{Bereken de ogenblikkelijke totale rotatiesnelheidsvector $\vec{\omega}_{w}$ en rotatieversnellingsvector $\vec{\alpha}_{w}$ van het wiel.}\\
 
+
 \begin{equation} 
 \begin{align}
 	\vec{\omega}_{w} &= \vec{\omega}_{g} + \vec{\omega}_{i} + \vec{\omega}_{w} \\
-	& = {\omega}_g * \vec{e'}_{z} + {\omega}_i * \vec{e''}_{y} +(-{\omega})*\vec{e'''}_{x}\\
-	& =  {\omega}_g * \vec{e'}_{z} + {\omega}_i * \vec{e'}_{y} +(-{\omega})*(\cos(\beta)*\vec{e'}_{x}-\sin(\beta)*\vec{e'}_{z})\\
+	& = {\omega}_g * \vec{e}_{z'} + {\omega}_i * \vec{e}_{y''} +(-{\omega}_w)*\vec{e}_{x'''}\\
+	& =  {\omega}_g * \vec{e}_{z'} + {\omega}_i * \vec{e}_{y'} +(-{\omega}_w)*(\cos(\beta)*\vec{e'}_{x}-\sin(\beta)*\vec{e'}_{z})\\
+	&=\begin{Bmatrix}
+	[-\omega_w*\cos(\beta)]*\vec{e}_{x'} \\
+	[\omega_i]*\vec{e}_{y'}\\
+	[\omega_g-\omega_w*\sin(\beta)]*\vec{e}_{z'}
+	\end{Bmatrix}\\
 	& = \begin{Bmatrix}
 	- {\omega}_{w} * \cos(\beta) \\
 	- {\omega}_{g} * \sin(\alpha) + {\omega}_{i} * \cos(\alpha) - {\omega}_{w} * \sin(\alpha)*\sin(\beta) \\
@@ -115,15 +121,36 @@ $\begin{bmatrix}
 \begin{equation}
 \begin{align}
 \vec{\alpha}_{w} &= \frac{d\vec{\omega}_{g}}{dt} + \frac{d\vec{\omega}_{i}}{dt} + \frac{d\vec{\omega}_{w}}{dt}\\
-&= \alpha_g *  \vec{e'}_{z} + \omega_g * \frac{d\vec{e'}_{z}}{dt} + \alpha_i *  \vec{e''}_{y} + \omega_i * \frac{d\vec{e''}_{y}}{dt} + \alpha_w * \vec{e'''}_{x} + (-\omega_w) * \frac{d\vec{e'''}_{x}}{dt}\\
+&= \alpha_g *  \vec{e}_{z'} + \omega_g * \frac{d\vec{e}_{z'}}{dt} + \alpha_i *  \vec{e}_{y''} + \omega_i * \frac{d\vec{e}_{y''}}{dt} + \alpha_w * \vec{e}_{x'''} + (-\omega_w) * \frac{d\vec{e}_{x'''}}{dt}\\
 &=\begin{Bmatrix}
-- {\omega}_{g} * {\omega}_{i} + \alpha_w*\cos(beta) +\omega_i*\omega_g*\sin(\beta) \\
--\alpha_g * \sin(\alpha) + \alpha_i*\cos(\alpha) + \alpha_w * \sin(\alpha)*\sin(\beta) - \omega_g*\omega_w\cos(\alpha)*\cos(\beta) - \omega_g*\omega_w\sin(\alpha)*\cos(\beta)\\
-\alpha_g * \cos(\alpha) + \alpha_i*\sin(\alpha) - \alpha_w * \cos(\alpha)*\sin(\beta) -\omega_g*\omega_w\sin(\alpha)*\cos(\beta) + \omega_g*\omega_w\cos(\alpha)*\cos(\beta)
+[- {\omega}_{g} * {\omega}_{i} + \alpha_w*\cos(\beta) +\omega_i*\omega_w * \sin(\beta) ]\vec{e}_{x'} \\
+[\alpha_i - \omega_g*\omega_w*\cos(\beta)]\vec{e}_{y'}\\
+[\alpha_g  -\alpha_w*\sin(\beta)+ \omega_i*\omega_w*\cos(\beta)]\vec{e}_{z'}
+\end{Bmatrix}\\
+&=\begin{Bmatrix}
+[- {\omega}_{g} * {\omega}_{i} + \alpha_w*\cos(\beta) +\omega_i*\omega_g*\sin(\beta) ]* \vec{e}_{x} \\
+[(-\alpha_g  +\alpha_w*\sin(\beta)- \omega_i*\omega_w*\cos(\beta)) * \sin(\alpha) + (\alpha_i - \omega_g*\omega_w*\cos(\beta))*\cos(\alpha)  ] * \vec{e}_{y} \\
+[(\alpha_i - \omega_g*\omega_w*\cos(\beta)*\sin(\alpha) + (\alpha_g  -\alpha_w*\sin(\beta)+ \omega_i*\omega_w*\cos(\beta)) *\cos(\alpha) ] * \vec{e}_{z}
 \end{Bmatrix}
 \end{align}
 \end{equation}\\
-met .....
+met \\
+$\vec{e'''}_{x} = cos(\beta) *\vec{e'}_{x} - sin(\beta) *\vec{e'}_{z}$\\
+$\vec{e'}_{x}=\vec{e}_{x}$\\
+$\vec{e''}_{y} = \vec{e'}_{y} $\\
+$\vec{e'}_{y} = \cos(\alpha)*\vec{e}_{y} + \sin(\alpha)*\vec{e}_z $\\
+$\vec{e'}_{z} = -\sin(\alpha)*\vec{e}_{y} + \cos(\alpha)*\vec{e}_z $\\
+$\frac{d\vec{e}_{z'}}{dt}=\vec{0}$\\
+$\omega_i * \frac{d\vec{e}_{y''}}{dt}=\vec{\omega_g}\times\vec{\omega_i} = -\omega_i * \omega_g *\vec{e}_{x'} = -\omega_i * \omega_g *\vec{e}_{x}  $\\
+$-\omega_w * \frac{d\vec{e}_{x'''}}{dt} = (\vec{\omega_i} + \vec{\omega_g})\times\vec{\omega_w} = \begin{vmatrix}
+\vec{e}_{x'}&\vec{e}_{y'}&\vec{e}_{z'}\\
+0 & \omega_i & \omega_g\\
+-\omega_w * \cos(\beta) & 0 & \omega_w * \sin(\beta)
+\end{vmatrix} = \begin{Bmatrix}
+\omega_i*\omega_w * \sin(\beta)  *\vec{e}_{x'} \\
+\omega_g*\omega_w *\cos(\beta) *\vec{e}_{y'}\\
+\omega_i*\omega_w * \cos(\beta) *\vec{e}_{z'}
+\end{Bmatrix}
 
 
 
