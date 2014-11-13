@@ -102,24 +102,28 @@ $\begin{bmatrix}
 
 
 \begin{equation} 
-\begin{align}
+\begin{aligned}
 	\vec{\omega}_{w} &= \vec{\omega}_{g} + \vec{\omega}_{i} + \vec{\omega}_{w} \\
 	& = {\omega}_g * \vec{e}_{z'} + {\omega}_i * \vec{e}_{y''} +(-{\omega}_w)*\vec{e}_{x'''}\\
 	& =  {\omega}_g * \vec{e}_{z'} + {\omega}_i * \vec{e}_{y'} +(-{\omega}_w)*(\cos(\beta)*\vec{e'}_{x}-\sin(\beta)*\vec{e'}_{z})\\
 	&=\begin{Bmatrix}
-	[-\omega_w*\cos(\beta)]*\vec{e}_{x'} \\
-	[\omega_i]*\vec{e}_{y'}\\
-	[\omega_g-\omega_w*\sin(\beta)]*\vec{e}_{z'}
+	\Big(-\omega_w*\cos(\beta)\Big)*\vec{e}_{x'} \\
+	\Big(\omega_i\Big)*\vec{e}_{y'}\\
+	\Big(\omega_g-\omega_w*\sin(\beta)\Big)*\vec{e}_{z'}
 	\end{Bmatrix}\\
 	& = \begin{Bmatrix}
 	- {\omega}_{w} * \cos(\beta) \\
 	- {\omega}_{g} * \sin(\alpha) + {\omega}_{i} * \cos(\alpha) - {\omega}_{w} * \sin(\alpha)*\sin(\beta) \\
 	{\omega}_{g} * \cos(\alpha) + {\omega}_{i} * \sin(\alpha) + {\omega}_{w} * \cos(\alpha)*\sin(\beta) 
+	\end{Bmatrix}  * \begin{Bmatrix}
+	\vec{e}_x \\
+	\vec{e}_y\\
+	\vec{e}_z
 	\end{Bmatrix}
-\end{align}
+\end{aligned}
 \end{equation}\\
 \begin{equation}
-\begin{align}
+\begin{aligned}
 \vec{\alpha}_{w} &= \frac{d\vec{\omega}_{g}}{dt} + \frac{d\vec{\omega}_{i}}{dt} + \frac{d\vec{\omega}_{w}}{dt}\\
 &= \alpha_g *  \vec{e}_{z'} + \omega_g * \frac{d\vec{e}_{z'}}{dt} + \alpha_i *  \vec{e}_{y''} + \omega_i * \frac{d\vec{e}_{y''}}{dt} + \alpha_w * \vec{e}_{x'''} + (-\omega_w) * \frac{d\vec{e}_{x'''}}{dt}\\
 &=\begin{Bmatrix}
@@ -132,7 +136,7 @@ $\begin{bmatrix}
 [(-\alpha_g  +\alpha_w*\sin(\beta)- \omega_i*\omega_w*\cos(\beta)) * \sin(\alpha) + (\alpha_i - \omega_g*\omega_w*\cos(\beta))*\cos(\alpha)  ] * \vec{e}_{y} \\
 [(\alpha_i - \omega_g*\omega_w*\cos(\beta)*\sin(\alpha) + (\alpha_g  -\alpha_w*\sin(\beta)+ \omega_i*\omega_w*\cos(\beta)) *\cos(\alpha) ] * \vec{e}_{z}
 \end{Bmatrix}
-\end{align}
+\end{aligned}
 \end{equation}\\
 met \\
 $\vec{e'''}_{x} = cos(\beta) *\vec{e'}_{x} - sin(\beta) *\vec{e'}_{z}$\\
@@ -151,7 +155,30 @@ $-\omega_w * \frac{d\vec{e}_{x'''}}{dt} = (\vec{\omega_i} + \vec{\omega_g})\time
 \omega_g*\omega_w *\cos(\beta) *\vec{e}_{y'}\\
 \omega_i*\omega_w * \cos(\beta) *\vec{e}_{z'}
 \end{Bmatrix}
+$
+\subsection{Vraag 2}
+
+\subsection{Vraag 3}
 
 
+\subsection{Vraag 4}
+\textbf{Bereken de ogenblikkelijke snelheid $\vec{v}_d$ en de ogenblikkelijke versnelling $\vec{a}_d$ van het punt D.}\\
+Positie van D tov B uitgedrukt in het x''y''z''- assenstel\\
+\begin{equation}
+	\vec{r}_{d|b} \mapsto \begin{Bmatrix}
+	\Big({-\frac{1}{4}} * l_4 \cos(\beta)-\frac{3}{4}*l_3*\sin(\beta)\Big)*\vec{e}_{x''}\\
+	0 * \vec{e}_{y''}\\
+	\Big (\frac{1}{4}*l_4 *\sin(\beta) - \frac{3}{4}*l_3*\cos(\beta)\Big) * \vec{e}_{z''}
+	\end{Bmatrix}
+\end{equation}\\
+We berekennen $\vec{v}_d$ met mebehulp van samengestelde beweging.\\
+\begin{equation}
+\vec{v}_d = \vec{v}_b + \vec{\omega}_g \times \vec{r}_{d|b}  +\vec{v}_{rel}
+\end{equation}
+\begin{eqnarray}
+\vec{v}_b = 
+\end{eqnarray}
+
+\section{Kinematica}
 
 \end{document}
