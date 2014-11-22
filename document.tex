@@ -247,7 +247,7 @@ met\\
 	\end{Bmatrix}\\
 	&= \begin{Bmatrix}
 	0*\vec{e}_{x'}\\
-	\alpha *({-\frac{1}{4}} * l_4 \cos(\beta)-\frac{3}{4}*l_3*\sin(\beta))*\vec{e}_{y'}\\
+	\alpha_g *({-\frac{1}{4}} * l_4 \cos(\beta)-\frac{3}{4}*l_3*\sin(\beta))*\vec{e}_{y'}\\
 	0*\vec{e}_{z'}
 	\end{Bmatrix}
 \end{aligned}
@@ -273,12 +273,77 @@ met\\
 	&\begin{vmatrix}
 	\vec{e}_{x'} & \vec{e}_{y'} & \vec{e}_{z'}\\
 	0 & \omega_i & 0 \\
-	\omega_i * (\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta}) & 0 &\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta}
-	\end{vmatrix}
+	\omega_i * (\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta}) & 0 &\omega_i*(\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta})
+	\end{vmatrix}\\
+	&= \begin{Bmatrix}
+	\Big(\alpha_i(\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta}) + \omega_i^2*(\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta})\Big)*\vec{e}_{x'}\\
+	\Big(\omega_g\omega_i(\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta})\Big)*\vec{e}_{y'}\\
+	\Big(\alpha_i * (\frac{-1}{4}*l_4*\cos{\beta} - \frac{3}{4}*l_3 * \sin{\beta}) - \omega_i^2(\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta})\Big)*\vec{e}_{z'}
+	\end{Bmatrix}
 	\end{aligned}
 \end{equation}
-
-
+En tot slot de corrioliskracht:
+\begin{equation}
+\begin{aligned}
+2(\vec{\omega}_g \times \vec{v}_{rel}) &= 2 * \begin{vmatrix}
+\vec{e}_{x'} & \vec{e}_{y'} & \vec{e}_{z'}\\
+0 & 0 & \omega_g \\
+\omega_i  (\frac{1}{4}l_4 \sin{\beta}-\frac{3}{4}l_3  \cos{\beta}) & 0 & -\omega_i (\frac{-1}{4}l_4\cos{\beta} - \frac{3}{4}l_3  \sin{\beta})
+\end{vmatrix}\\
+&= \begin{Bmatrix}
+0 * \vec{e}_{x'}\\
+\Big(2\omega_g\omega_i(\frac{1}{4}l_4 \sin{\beta}-\frac{3}{4}l_3  \cos{\beta})\Big)*\vec{e}_{y'}\\
+0 * \vec{e}_{z'}\\
+\end{Bmatrix}
+\end{aligned}
+\end{equation}
+\begin{equation}
+\begin{aligned}
+&=\begin{Bmatrix}
+\Big( -\omega^{2}_g l_1 +\omega_{g}^{2} * (\frac{-1}{4}*l_4*\cos{\beta}-\frac{3}{4}*l_3*\sin{\beta})+\alpha_i(\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta})\\ + \omega_i^2*(\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta}) \Big)* \vec{e}_{x'}\\
+\Big(a_v +\alpha_g l_1 +\alpha_g *({-\frac{1}{4}}  l_4 \cos(\beta)-\frac{3}{4}l_3*\sin(\beta)) + 3\omega_g\omega_i(\frac{1}{4}l_4 \sin{\beta}-\frac{3}{4}l_3  \cos{\beta})\Big)*\vec{e}_{y'}\\
+\Big(\alpha_i * (\frac{1}{4}*l_4*\cos{\beta} - \frac{3}{4}*l_3 * \sin{\beta}) - \omega_i^2(\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta})\Big)*\vec{e}_{z'}
+\end{Bmatrix}
+&= \begin{Bmatrix}
+\Big( -\omega^{2}_g l_1 +\omega_{g}^{2} * (\frac{-1}{4}*l_4*\cos{\beta}-\frac{3}{4}*l_3*\sin{\beta})+\alpha_i(\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta})\\ + \omega_i^2*(\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta}) \Big)* \vec{e}_{x}\\
+\Huge(\Big(a_v +\alpha_g l_1 +\alpha_g *({-\frac{1}{4}}  l_4 \cos(\beta)-\frac{3}{4}l_3*\sin(\beta)) + 3\omega_g\omega_i(\frac{1}{4}l_4 \sin{\beta}-\frac{3}{4}l_3  \cos{\beta})\Big)\cos{\alpha} + \Big(\alpha_i * (\frac{1}{4}*l_4*\cos{\beta} - \frac{3}{4}*l_3 * \sin{\beta}) - \omega_i^2(\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta})\Big)*(-\sin{\alpha}\Huge)*\vec{e}_{y}\\
+\Huge(\Big(a_v +\alpha_g l_1 +\alpha_g *({-\frac{1}{4}}  l_4 \cos(\beta)-\frac{3}{4}l_3*\sin(\beta)) + 3\omega_g\omega_i(\frac{1}{4}l_4 \sin{\beta}-\frac{3}{4}l_3  \cos{\beta})\Big)\sin{\alpha} + \Big(\alpha_i * (\frac{1}{4}*l_4*\cos{\beta} - \frac{3}{4}*l_3 * \sin{\beta}) - \omega_i^2(\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta})\Big)*(\cos{\alpha}\Huge)*\vec{e}_{z}
+\end{Bmatrix}
+\end{aligned}
+\end{equation}
 \section{Kinematica}
-
+\subsection{Vraag 1}
+\textbf{Bereken de ogenblikkelijke impulsvector en de verandering van de impulsvector van het landingsgestel en die van het wiel.}\\
+\begin{equation}
+\begin{aligned}
+\vec{p}_d &= m *\vec{v}_d \\
+&= m * \begin{Bmatrix}
+\Big( -\omega^{2}_g l_1 +\omega_{g}^{2} * (\frac{-1}{4}*l_4*\cos{\beta}-\frac{3}{4}*l_3*\sin{\beta})+\alpha_i(\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta})\\ + \omega_i^2*(\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta}) \Big)* \vec{e}_{x}\\
+\Huge(\Big(a_v +\alpha_g l_1 +\alpha_g *({-\frac{1}{4}}  l_4 \cos(\beta)-\frac{3}{4}l_3*\sin(\beta)) + 3\omega_g\omega_i(\frac{1}{4}l_4 \sin{\beta}-\frac{3}{4}l_3  \cos{\beta})\Big)\cos{\alpha}\\ + \Big(\alpha_i * (\frac{1}{4}*l_4*\cos{\beta} - \frac{3}{4}*l_3 * \sin{\beta}) - \omega_i^2(\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta})\Big)*(-\sin{\alpha}\Huge)*\vec{e}_{y}\\
+\Huge(\Big(a_v +\alpha_g l_1 +\alpha_g *({-\frac{1}{4}}  l_4 \cos(\beta)-\frac{3}{4}l_3*\sin(\beta)) + 3\omega_g\omega_i(\frac{1}{4}l_4 \sin{\beta}-\frac{3}{4}l_3  \cos{\beta})\Big)\sin{\alpha}\\ + \Big(\alpha_i * (\frac{1}{4}*l_4*\cos{\beta} - \frac{3}{4}*l_3 * \sin{\beta}) - \omega_i^2(\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta})\Big)*(\cos{\alpha}\Huge)*\vec{e}_{z}
+\end{Bmatrix}
+\end{aligned}
+\end{equation} 
+\subsection{Vraag 2}
+\textbf{Bereken de ogenblikkelijke impulsmomentvector en de verandering van de impulsmometvector van het landingsgestel en die van het wiel rond hun respectievelijke massacentra.}
+\begin{equation}
+\begin{aligned}
+	\vec{L}_0 = I(t)\vec{\omega}
+\end{aligned}
+\end{equation}
+\begin{equation}
+\begin{aligned}
+\vec{\omega} &= \vec{\omega}_w + \vec{\omega}_g + \vec{\omega}_i\\
+&= \begin{Bmatrix}
+(-\vec{\omega}_w -\vec{\omega}_g sin(\beta))\vec{e}_{x''''}\\
+\vec{\omega}_i*\vec{e}_{y''''}\\
+\vec{\omega}_g cos{\beta}(\beta)\vec{e}_{z''''}
+\end{Bmatrix}\\
+&=\begin{Bmatrix}
+I_{\omega,x'''',x''''} (-\vec{\omega}_w -\vec{\omega}_g sin(\beta))\vec{e}_{x''''}\\
+I_{\omega,y'''',y''''}\vec{\omega}_i*\vec{e}_{y''''}\\
+I_{\omega,z'''',z''''}\vec{\omega}_g cos{\beta}(\beta)\vec{e}_{z''''}
+\end{Bmatrix}
+\end{aligned}
+\end{equation}
 \end{document}
