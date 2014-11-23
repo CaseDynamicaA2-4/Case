@@ -121,15 +121,15 @@ $\begin{bmatrix}
 \begin{equation}
 \begin{aligned}
 \vec{\alpha}_{w} &= \frac{d\vec{\omega}_{g}}{dt} + \frac{d\vec{\omega}_{i}}{dt} + \frac{d\vec{\omega}_{w}}{dt}\\
-&= \alpha_g *  \vec{e}_{z'} + \omega_g * \frac{d\vec{e}_{z'}}{dt} + \alpha_i *  \vec{e}_{y''} + \omega_i * \frac{d\vec{e}_{y''}}{dt} + \alpha_w * \vec{e}_{x'''} + (-\omega_w) * \frac{d\vec{e}_{x'''}}{dt}\\
+&= \alpha_g *  \vec{e}_{z'} + \omega_g  \frac{d\vec{e}_{z'}}{dt} + \alpha_i   \vec{e}_{y''} + \omega_i * \frac{d\vec{e}_{y''}}{dt} + \alpha_w * \vec{e}_{x'''} + (-\omega_w)  \frac{d\vec{e}_{x'''}}{dt}\\
 &=\begin{Bmatrix}
-[- {\omega}_{g} * {\omega}_{i} + \alpha_w*\cos(\beta) +\omega_i*\omega_w * \sin(\beta) ]\vec{e}_{x'} \\
-[\alpha_i - \omega_g*\omega_w*\cos(\beta)]\vec{e}_{y'}\\
-[\alpha_g  -\alpha_w*\sin(\beta)+ \omega_i*\omega_w*\cos(\beta)]\vec{e}_{z'}
+\Big(- {\omega}_{g} {\omega}_{i} + \alpha_w\cos(\beta) +\omega_i\omega_w \sin{\beta} \Big)*\vec{e}_{x'} \\
+\Big(\alpha_i - \omega_g\omega_w\cos(\beta)\Big)*\vec{e}_{y'}\\
+\Big(\alpha_g  -\alpha_w\sin{\beta}+ \omega_i\omega_w\cos(\beta)\Big)*\vec{e}_{z'}
 \end{Bmatrix}\\
 &=\begin{Bmatrix}
-[- {\omega}_{g} * {\omega}_{i} + \alpha_w*\cos(\beta) +\omega_i*\omega_g*\sin(\beta) ]* \vec{e}_{x} \\
-\Big((-\alpha_g  +\alpha_w*\sin(\beta)- \omega_i*\omega_w*\cos(\beta)) \sin(\alpha) + (\alpha_i - \omega_g\omega_w\cos{\beta})\cos{\alpha}  \Big) * \vec{e}_{y} \\
+\Big(- {\omega}_{g}  {\omega}_{i} + \alpha_w\cos(\beta) +\omega_i\omega_g\sin(\beta) \Big)* \vec{e}_{x} \\
+\Big((-\alpha_g  +\alpha_w\sin(\beta)- \omega_i\omega_w\cos(\beta)) \sin(\alpha) + (\alpha_i - \omega_g\omega_w\cos{\beta})\cos{\alpha}  \Big) * \vec{e}_{y} \\
 \Big((\alpha_i - \omega_g\omega_w\cos{\beta}\sin{\alpha} + (\alpha_g  -\alpha_w*\sin(\beta)+ \omega_i\omega_w\cos{\beta}) \cos{\alpha} \Big) * \vec{e}_{z}
 \end{Bmatrix}
 \end{aligned}
@@ -216,9 +216,9 @@ We berekennen $\vec{v}_d$ met mebehulp van samengestelde beweging.\\
 \end{equation}
 \begin{equation}
 \vec{v}_d = \begin{Bmatrix}
-\Big(\omega_i * (\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta})\Big) * \vec{e}_{x}\\
-\Big(\big(v_v + \omega_g * l_1 + \omega_g*(\frac{-1}{4}*l_4*\cos{\beta}-\frac{3}{4}*l_3*\sin{\beta}) \big) \cos{\alpha}  + \sin{\alpha} * \omega_i * \big( \frac{-1}{4}l_4*\cos{\beta} - \frac{3}{4}l_3 \sin{\beta}\big)\Big)*\vec{e}_{y} \\
-\Big(\big(v_v + \omega_g * l_1 + \omega_g*(\frac{-1}{4}*l_4*\cos{\beta}-\frac{3}{4}*l_3*\sin{\beta}) \big) \sin{\alpha}  + \cos{\alpha} * \omega_i * \big( \frac{-1}{4}l_4*\cos{\beta} - \frac{3}{4}l_3 \sin{\beta}\big)\Big)*\vec{e}_{z}
+\Big(\omega_i  (\frac{1}{4}l_4 \sin{\beta}-\frac{3}{4}l_3  \cos{\beta})\Big) * \vec{e}_{x}\\
+\Big(\big(v_v + \omega_g  l_1 + \omega_g(\frac{-1}{4} l_4 \cos{\beta}-\frac{3}{4} l_3 \sin{\beta}) \big) \cos{\alpha}  + \sin{\alpha}  \omega_i  \big( \frac{-1}{4}l_4 \cos{\beta} - \frac{3}{4}l_3 \sin{\beta}\big)\Big)*\vec{e}_{y} \\
+\Big(\big(v_v + \omega_g   l_1 + \omega_g (\frac{-1}{4} l_4 \cos{\beta}-\frac{3}{4} l_3 \sin{\beta}) \big) \sin{\alpha}  + \cos{\alpha}  \omega_i   \big( \frac{-1}{4} l_4 \cos{\beta} - \frac{3}{4}l_3 \sin{\beta}\big)\Big)*\vec{e}_{z}
 \end{Bmatrix}
 \end{equation}
 \begin{equation}
@@ -303,11 +303,11 @@ En tot slot de corrioliskracht:
 \Big( -\omega^{2}_g l_1 +\omega_{g}^{2} * (\frac{-1}{4}*l_4*\cos{\beta}-\frac{3}{4}*l_3*\sin{\beta})+\alpha_i(\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta})\\ + \omega_i^2*(\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta}) \Big)* \vec{e}_{x'}\\
 \Big(a_v +\alpha_g l_1 +\alpha_g *({-\frac{1}{4}}  l_4 \cos(\beta)-\frac{3}{4}l_3*\sin(\beta)) + 3\omega_g\omega_i(\frac{1}{4}l_4 \sin{\beta}-\frac{3}{4}l_3  \cos{\beta})\Big)*\vec{e}_{y'}\\
 \Big(\alpha_i * (\frac{1}{4}*l_4*\cos{\beta} - \frac{3}{4}*l_3 * \sin{\beta}) - \omega_i^2(\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta})\Big)*\vec{e}_{z'}
-\end{Bmatrix}
+\end{Bmatrix}\\
 &= \begin{Bmatrix}
 \Big( -\omega^{2}_g l_1 +\omega_{g}^{2} * (\frac{-1}{4}*l_4*\cos{\beta}-\frac{3}{4}*l_3*\sin{\beta})+\alpha_i(\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta})\\ + \omega_i^2*(\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta}) \Big)* \vec{e}_{x}\\
-\Huge(\Big(a_v +\alpha_g l_1 +\alpha_g *({-\frac{1}{4}}  l_4 \cos(\beta)-\frac{3}{4}l_3*\sin(\beta)) + 3\omega_g\omega_i(\frac{1}{4}l_4 \sin{\beta}-\frac{3}{4}l_3  \cos{\beta})\Big)\cos{\alpha} + \Big(\alpha_i * (\frac{1}{4}*l_4*\cos{\beta} - \frac{3}{4}*l_3 * \sin{\beta}) - \omega_i^2(\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta})\Big)*(-\sin{\alpha}\Huge)*\vec{e}_{y}\\
-\Huge(\Big(a_v +\alpha_g l_1 +\alpha_g *({-\frac{1}{4}}  l_4 \cos(\beta)-\frac{3}{4}l_3*\sin(\beta)) + 3\omega_g\omega_i(\frac{1}{4}l_4 \sin{\beta}-\frac{3}{4}l_3  \cos{\beta})\Big)\sin{\alpha} + \Big(\alpha_i * (\frac{1}{4}*l_4*\cos{\beta} - \frac{3}{4}*l_3 * \sin{\beta}) - \omega_i^2(\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta})\Big)*(\cos{\alpha}\Huge)*\vec{e}_{z}
+\Huge(\Big(a_v +\alpha_g l_1 +\alpha_g *({-\frac{1}{4}}  l_4 \cos(\beta)-\frac{3}{4}l_3*\sin(\beta)) + 3\omega_g\omega_i(\frac{1}{4}l_4 \sin{\beta}-\frac{3}{4}l_3  \cos{\beta})\Big)\cos{\alpha}\\ + \Big(\alpha_i * (\frac{1}{4} l_4 \cos{\beta} - \frac{3}{4} l_3 \sin{\beta}) - \omega_i^2(\frac{1}{4} l_4 \sin{\beta}-\frac{3}{4} l_3  \cos{\beta})\Big)*(-\sin{\alpha}\Huge)*\vec{e}_{y}\\
+\Huge(\Big(a_v +\alpha_g l_1 +\alpha_g *({-\frac{1}{4}}  l_4 \cos(\beta)-\frac{3}{4}l_3 \sin(\beta)) + 3\omega_g\omega_i(\frac{1}{4}l_4 \sin{\beta}-\frac{3}{4}l_3  \cos{\beta})\Big)\sin{\alpha}\\ + \Big(\alpha_i (\frac{1}{4} l_4 \cos{\beta} - \frac{3}{4} l_3 \sin{\beta}) - \omega_i^2(\frac{1}{4} l_4 \sin{\beta}-\frac{3}{4} l_3   \cos{\beta})\Big) (\cos{\alpha}\Huge)*\vec{e}_{z}
 \end{Bmatrix}
 \end{aligned}
 \end{equation}
@@ -318,9 +318,9 @@ En tot slot de corrioliskracht:
 \begin{aligned}
 \vec{p}_d &= m *\vec{v}_d \\
 &= m * \begin{Bmatrix}
-\Big( -\omega^{2}_g l_1 +\omega_{g}^{2} * (\frac{-1}{4}*l_4*\cos{\beta}-\frac{3}{4}*l_3*\sin{\beta})+\alpha_i(\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta})\\ + \omega_i^2*(\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta}) \Big)* \vec{e}_{x}\\
-\Huge(\Big(a_v +\alpha_g l_1 +\alpha_g *({-\frac{1}{4}}  l_4 \cos(\beta)-\frac{3}{4}l_3*\sin(\beta)) + 3\omega_g\omega_i(\frac{1}{4}l_4 \sin{\beta}-\frac{3}{4}l_3  \cos{\beta})\Big)\cos{\alpha}\\ + \Big(\alpha_i * (\frac{1}{4}*l_4*\cos{\beta} - \frac{3}{4}*l_3 * \sin{\beta}) - \omega_i^2(\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta})\Big)*(-\sin{\alpha}\Huge)*\vec{e}_{y}\\
-\Huge(\Big(a_v +\alpha_g l_1 +\alpha_g *({-\frac{1}{4}}  l_4 \cos(\beta)-\frac{3}{4}l_3*\sin(\beta)) + 3\omega_g\omega_i(\frac{1}{4}l_4 \sin{\beta}-\frac{3}{4}l_3  \cos{\beta})\Big)\sin{\alpha}\\ + \Big(\alpha_i * (\frac{1}{4}*l_4*\cos{\beta} - \frac{3}{4}*l_3 * \sin{\beta}) - \omega_i^2(\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta})\Big)*(\cos{\alpha}\Huge)*\vec{e}_{z}
+\Big(\omega_i  (\frac{1}{4}l_4 \sin{\beta}-\frac{3}{4}l_3  \cos{\beta})\Big) * \vec{e}_{x}\\
+\Big(\big(v_v + \omega_g  l_1 + \omega_g(\frac{-1}{4} l_4 \cos{\beta}-\frac{3}{4} l_3 \sin{\beta}) \big) \cos{\alpha}  + \sin{\alpha}  \omega_i  \big( \frac{-1}{4}l_4 \cos{\beta} - \frac{3}{4}l_3 \sin{\beta}\big)\Big)*\vec{e}_{y} \\
+\Big(\big(v_v + \omega_g   l_1 + \omega_g (\frac{-1}{4} l_4 \cos{\beta}-\frac{3}{4} l_3 \sin{\beta}) \big) \sin{\alpha}  + \cos{\alpha}  \omega_i   \big( \frac{-1}{4} l_4 \cos{\beta} - \frac{3}{4}l_3 \sin{\beta}\big)\Big)*\vec{e}_{z}
 \end{Bmatrix}
 \end{aligned}
 \end{equation} 
@@ -346,4 +346,49 @@ I_{\omega,z'''',z''''}\vec{\omega}_g cos{\beta}(\beta)\vec{e}_{z''''}
 \end{Bmatrix}
 \end{aligned}
 \end{equation}
+\begin{equation}
+\begin{aligned}
+\Big(\dfrac{d\vec{L}_c}{dt}\Big) = \Big(\dfrac{d\vec{L}_C}{dt}\Big)_{rel} + \vec{\Omega} \times \vec{L}_c
+\end{aligned}
+\end{equation}
+\begin{equation}
+\begin{aligned}
+\vec{\Omega} \times \vec{L}_c &= \begin{vmatrix}
+\vec{e}_{x''''} & \vec{e}_{y''''} & \vec{e}_{z''''}\\
+-\omega_w -\omega_g  \sin{\beta} & \omega_i & \omega_g\cos{\beta} \\
+L_{o,x''''} & L_{o,y''''}  & L_{o,z''''} 
+\end{vmatrix}\\
+&=\begin{Bmatrix}
+\omega_i L_{o,z''''}-\omega_g \cos{\beta} L_{o,y''''}\\
+\omega_g \cos{\beta} L_{o,x''''} + (\omega_w + \omega_g ) L_{o,z''''}\\
+-(\omega_w + \omega_g \sin(\beta ))L_{o,y''''} + \omega_i L_{o,x''''}
+\end{Bmatrix}
+\end{aligned}
+\end{equation}
+\begin{equation}
+\begin{aligned}
+\Big( \dfrac{\vec{L}_c}{dt}\Big)_{rel} &= I \dfrac{d\vec{\omega}}{dt}\\
+&= I \begin{Bmatrix}
+\Big(\alpha_w - \alpha_g \sin{\beta} + (-\omega_i \omega_g)\cos{\beta}\Big)\vec{e}_{x''''}\\
+\Big(\alpha_i + \omega_g\omega_w\cos{\beta}\Big)\vec{e}_{y''''}\\
+\Big(\alpha_g \cos{\beta} - \omega_i\omega_g\sin{\beta}-\omega_i\omega_w\Big) \vec{e}_{z''''}
+\end{Bmatrix}
+\end{aligned}
+\end{equation}\\
+want \\
+\begin{equation}
+\begin{aligned}
+\dfrac{d\vec{\omega}}{dt}&=\alpha_g \vec{e}_{z'} + \alpha_i \vec{e}_{y''} + (-\omega_i\omega_g)\vec{e}_{x''}+\alpha_w\vec{e}_{x'''} + \begin{Bmatrix}
+-\sin{\beta}\vec{e}_{x''''}\vec{e}_{x''''}\\
+\cos{\beta}\omega_g\omega_w \vec{e}_{y''''}\\
+-\cos{\beta}\omega_i\omega_w \vec{e}_{z''''}
+\end{Bmatrix}\\
+&=\begin{Bmatrix}
+\alpha_w - \alpha_g + (-\omega_i\omega_g)\cos{\beta} \vec{e}_{x''''}\\
+\alpha_i + \cos{\beta}\omega_g\omega_w \vec{e}_{y''''}\\
+\alpha_g\cos{\beta} + (-\omega_i\omega_g)\sin{\beta}- (\omega_i\omega_g) \vec{e}_{z''''}
+\end{Bmatrix}
+\end{aligned}
+\end{equation}
+
 \end{document}
