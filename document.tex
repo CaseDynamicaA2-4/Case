@@ -105,7 +105,7 @@ $\begin{bmatrix}
 \begin{aligned}
 	\vec{\omega}_{w} &= \vec{\omega}_{g} + \vec{\omega}_{i} + \vec{\omega}_{w} \\
 	& = {\omega}_g * \vec{e}_{z'} + {\omega}_i * \vec{e}_{y''} +(-{\omega}_w)*\vec{e}_{x'''}\\
-	& =  {\omega}_g * \vec{e}_{z'} + {\omega}_i * \vec{e}_{y'} +(-{\omega}_w)*(\cos(\beta)*\vec{e'}_{x}-\sin(\beta)*\vec{e'}_{z})\\
+	& =  {\omega}_g * \vec{e}_{z'} + {\omega}_i * \vec{e}_{y'} +(-{\omega}_w)*(\cos{\beta}*\vec{e'}_{x}-\sin(\beta)*\vec{e'}_{z})\\
 	&=\begin{Bmatrix}
 	\Big(-\omega_w*\cos(\beta)\Big)*\vec{e}_{x'} \\
 	\Big(\omega_i\Big)*\vec{e}_{y'}\\
@@ -139,17 +139,17 @@ $\vec{e'''}_{x} = cos(\beta) *\vec{e'}_{x} - sin(\beta) *\vec{e'}_{z}$\\
 $\vec{e'}_{x}=\vec{e}_{x}$\\
 $\vec{e''}_{y} = \vec{e'}_{y} $\\
 $\vec{e'}_{y} = \cos(\alpha)*\vec{e}_{y} + \sin(\alpha)*\vec{e}_z $\\
-$\vec{e'}_{z} = -\sin(\alpha)*\vec{e}_{y} + \cos(\alpha)*\vec{e}_z $\\
+$\vec{e'}_{z} = -\sin{\alpha}*\vec{e}_{y} + \cos{\alpha}*\vec{e}_z $\\
 $\frac{d\vec{e}_{z'}}{dt}=\vec{0}$\\
 $\omega_i * \frac{d\vec{e}_{y''}}{dt}=\vec{\omega_g}\times\vec{\omega_i} = -\omega_i * \omega_g *\vec{e}_{x'} = -\omega_i * \omega_g *\vec{e}_{x}  $\\
 $-\omega_w * \frac{d\vec{e}_{x'''}}{dt} = (\vec{\omega_i} + \vec{\omega_g})\times\vec{\omega_w} = \begin{vmatrix}
 \vec{e}_{x'}&\vec{e}_{y'}&\vec{e}_{z'}\\
 0 & \omega_i & \omega_g\\
--\omega_w * \cos(\beta) & 0 & \omega_w * \sin(\beta)
+-\omega_w \cos{\beta} & 0 & \omega_w \sin{\beta}
 \end{vmatrix} = \begin{Bmatrix}
-\omega_i*\omega_w * \sin(\beta)  *\vec{e}_{x'} \\
-\omega_g*\omega_w *\cos(\beta) *\vec{e}_{y'}\\
-\omega_i*\omega_w * \cos(\beta) *\vec{e}_{z'}
+\omega_i \omega_w \sin(\beta)  *\vec{e}_{x'} \\
+\omega_g \omega_w \cos(\beta) *\vec{e}_{y'}\\
+\omega_i \omega_w \cos(\beta) *\vec{e}_{z'}
 \end{Bmatrix}
 $
 \subsection{Vraag 2}
@@ -162,9 +162,9 @@ $
 Positie van D tov B uitgedrukt in het x''y''z''- assenstel\\
 \begin{equation}
 	\vec{r}_{d|b} \mapsto \begin{Bmatrix}
-	\Big({-\frac{1}{4}} * l_4 \cos(\beta)-\frac{3}{4}*l_3*\sin(\beta)\Big)*\vec{e}_{x''}\\
+	\Big({-\frac{1}{4}} l_4 \cos(\beta)-\frac{3}{4} l_3 \sin(\beta)\Big)*\vec{e}_{x''}\\
 	0 * \vec{e}_{y''}\\
-	\Big (\frac{1}{4}*l_4 *\sin(\beta) - \frac{3}{4}*l_3*\cos(\beta)\Big) * \vec{e}_{z''}
+	\Big (\frac{1}{4} l_4 \sin(\beta) - \frac{3}{4} l_3 \cos(\beta)\Big) * \vec{e}_{z''}
 	\end{Bmatrix}
 \end{equation}\\
 We berekennen $\vec{v}_d$ met mebehulp van samengestelde beweging.\\
@@ -174,7 +174,7 @@ We berekennen $\vec{v}_d$ met mebehulp van samengestelde beweging.\\
 \begin{equation}
 \begin{aligned}
 \vec{v}_b &= \vec{v}_a + \vec{\omega}\times\vec{r}_{b|a} + \vec{v}_{rel}\\
-&= v_v * \vec{e}_{y''} + \vec{0} + \vec{\omega}_g \times * (l) *\vec{e}_{x'}\\
+&= v_v  \vec{e}_{y''} + \vec{0} + \vec{\omega}_g \times * (l) *\vec{e}_{x'}\\
 &= (v_v + \omega_g * l_1)*\vec{e}_{y''}
 \end{aligned}
 \end{equation}\\
@@ -183,11 +183,11 @@ We berekennen $\vec{v}_d$ met mebehulp van samengestelde beweging.\\
 \vec{\omega}_g \times \vec{r}_{d|b} & = \begin{vmatrix}
 \vec{e}_{x''}& \vec{e}_{y''} & \vec{e}_{z''}\\
 0 & 0 & \omega_g \\
-\frac{-1}{4}*l_4*\cos{\beta} - \frac{3}{4}*l_3 * \sin{\beta} & 0 &\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta}
+\frac{-1}{4} l_4 \cos{\beta} - \frac{3}{4} l_3  \sin{\beta} & 0 &\frac{1}{4} l_4  \sin{\beta}-\frac{3}{4} l_3  \cos{\beta}
 \end{vmatrix}\\
 &= \begin{Bmatrix}
 0 *\vec{e}_{x'}\\
-\Big(\omega_g*(\frac{-1}{4}*l_4*\cos{\beta}-\frac{3}{4}*l_3*\sin{\beta})\Big)*\vec{e}_{y'}\\
+\Big(\omega_g (\frac{-1}{4} l_4 \cos{\beta}-\frac{3}{4} l_3 \sin{\beta})\Big)*\vec{e}_{y'}\\
 0 * \vec{e}_{z'}
 \end{Bmatrix}
 \end{aligned}
@@ -209,9 +209,9 @@ We berekennen $\vec{v}_d$ met mebehulp van samengestelde beweging.\\
 \end{equation}
 \begin{equation}
 \vec{v}_d = \begin{Bmatrix}
-\Big(\omega_i * (\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta})\Big) * \vec{e}_{x''}\\
-\Big(v_v + \omega_g * l_1 + \omega_g*(\frac{-1}{4}*l_4*\cos{\beta}-\frac{3}{4}*l_3*\sin{\beta}) \Big) *\vec{e}_{y''}\\
-\Big(-\omega_i *(\frac{-1}{4}*l_4*\cos{\beta} - \frac{3}{4}*l_3 * \sin{\beta}) \Big)*\vec{e}_{z''}
+\Big(\omega_i (\frac{1}{4} l_4 \sin{\beta}-\frac{3}{4} l_3  \cos{\beta})\Big) * \vec{e}_{x''}\\
+\Big(v_v + \omega_g  l_1 + \omega_g (\frac{-1}{4} l_4 \cos{\beta}-\frac{3}{4} l_3 \sin{\beta}) \Big) *\vec{e}_{y''}\\
+\Big(-\omega_i (\frac{-1}{4} l_4 \cos{\beta} - \frac{3}{4} l_3  \sin{\beta}) \Big)*\vec{e}_{z''}
 \end{Bmatrix}
 \end{equation}
 \begin{equation}
@@ -241,22 +241,22 @@ met\\
 \begin{equation}
 \begin{aligned}
 	\vec{\alpha}_g \times \vec{r}_{d|b}  &= (\alpha_g * \vec{e}_{z'}) \times \begin{Bmatrix}
-	\Big({-\frac{1}{4}} * l_4 \cos(\beta)-\frac{3}{4}*l_3*\sin(\beta)\Big)*\vec{e}_{x'}\\
+	\Big({-\frac{1}{4}} l_4 \cos(\beta)-\frac{3}{4} l_3 \sin(\beta)\Big)*\vec{e}_{x'}\\
 	0 * \vec{e}_{y'}\\
-	\Big (\frac{1}{4}*l_4 *\sin(\beta) - \frac{3}{4}*l_3*\cos(\beta)\Big) * \vec{e}_{z'}
+	\Big (\frac{1}{4} l_4 \sin(\beta) - \frac{3}{4} l_3 \cos(\beta)\Big) * \vec{e}_{z'}
 	\end{Bmatrix}\\
 	&= \begin{Bmatrix}
 	0*\vec{e}_{x'}\\
-	\alpha_g *({-\frac{1}{4}} * l_4 \cos(\beta)-\frac{3}{4}*l_3*\sin(\beta))*\vec{e}_{y'}\\
+	\alpha_g ({-\frac{1}{4}} l_4 \cos(\beta)-\frac{3}{4} l_3 \sin(\beta))*\vec{e}_{y'}\\
 	0*\vec{e}_{z'}
 	\end{Bmatrix}
 \end{aligned}
 \end{equation}
 \begin{equation}
 	\begin{aligned}
-	\omega_g \times (\omega_g \times \vec{r}_{d|b}) &= \omega_g \vec{e}_{z'} \times (\omega_g*(\frac{-1}{4}*l_4*\cos{\beta}-\frac{3}{4}*l_3*\sin{\beta}))\\
+	\omega_g \times (\omega_g \times \vec{r}_{d|b}) &= \omega_g \vec{e}_{z'} \times (\omega_g (\frac{-1}{4} l_4 \cos{\beta}-\frac{3}{4} l_3 \sin{\beta}))\\
 	& = \begin{Bmatrix}
-	\Big(\omega_{g}^{2} * (\frac{-1}{4}*l_4*\cos{\beta}-\frac{3}{4}*l_3*\sin{\beta})\Big) * \vec{e}_{x'}\\
+	\Big(\omega_{g}^{2} (\frac{-1}{4} l_4 \cos{\beta}-\frac{3}{4} l_3 \sin{\beta})\Big) * \vec{e}_{x'}\\
 	0*\vec{e}_{y'}\\
 	0*\vec{e}_{z'}
 	\end{Bmatrix}
@@ -268,17 +268,17 @@ met\\
 	&= \begin{vmatrix}
 	\vec{e}_{x'} & \vec{e}_{y'} & \vec{e}_{z'}\\
 	-\omega_g\omega_i & \alpha_i & 0 \\
-	\frac{-1}{4}*l_4*\cos{\beta} - \frac{3}{4}*l_3 * \sin{\beta} & 0 &\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta}
+	\frac{-1}{4} l_4 \cos{\beta} - \frac{3}{4}*l_3 * \sin{\beta} & 0 &\frac{1}{4} l_4 \sin{\beta}-\frac{3}{4} l_3 * \cos{\beta}
 	\end{vmatrix} + \\
 	&\begin{vmatrix}
 	\vec{e}_{x'} & \vec{e}_{y'} & \vec{e}_{z'}\\
 	0 & \omega_i & 0 \\
-	\omega_i * (\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta}) & 0 &\omega_i*(\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta})
+	\omega_i (\frac{1}{4} l_4 \sin{\beta}-\frac{3}{4} l_3  \cos{\beta}) & 0 &\omega_i (\frac{1}{4} l_4  \sin{\beta}-\frac{3}{4} l_3   \cos{\beta})
 	\end{vmatrix}\\
 	&= \begin{Bmatrix}
-	\Big(\alpha_i(\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta}) + \omega_i^2*(\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta})\Big)*\vec{e}_{x'}\\
-	\Big(\omega_g\omega_i(\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta})\Big)*\vec{e}_{y'}\\
-	\Big(\alpha_i * (\frac{-1}{4}*l_4*\cos{\beta} - \frac{3}{4}*l_3 * \sin{\beta}) - \omega_i^2(\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta})\Big)*\vec{e}_{z'}
+	\Big(\alpha_i(\frac{1}{4} l_4  \sin{\beta}-\frac{3}{4} l_3  \cos{\beta}) + \omega_i^2 (\frac{1}{4} l_4  \sin{\beta}-\frac{3}{4} l_3  \cos{\beta})\Big)*\vec{e}_{x'}\\
+	\Big(\omega_g\omega_i(\frac{1}{4} l_4  \sin{\beta}-\frac{3}{4} l_3  \cos{\beta})\Big)*\vec{e}_{y'}\\
+	\Big(\alpha_i (\frac{-1}{4} l_4 \cos{\beta} - \frac{3}{4} l_3 \sin{\beta}) - \omega_i^2(\frac{1}{4} l_4  \sin{\beta}-\frac{3}{4} l_3 \cos{\beta})\Big)*\vec{e}_{z'}
 	\end{Bmatrix}
 	\end{aligned}
 \end{equation}
@@ -389,6 +389,17 @@ want \\
 \alpha_g\cos{\beta} + (-\omega_i\omega_g)\sin{\beta}- (\omega_i\omega_g) \vec{e}_{z''''}
 \end{Bmatrix}
 \end{aligned}
+\end{equation}\\
+\begin{equation}
+\Big(\dfrac{d\vec{L}_c}{dt}\Big) = \begin{Bmatrix}
+\omega_i\omega_g\cos{\beta}(I_{z'''',z''''}-I_{y'''',y''''})\\
+\omega_g\cos{\beta}(\omega_w + \omega_g\sin{\beta})I_{z'''',z''''}-I_{x'''',x''''}\\
+(\omega_i + \omega_g \sin{\beta})\omega_i I_{x'''',x''''}-I_{y'''',y''''}
+\end{Bmatrix}
++ \begin{Bmatrix}
+I_{x'''',x''''}(\alpha_w - \alpha_g \sin{\beta}+ (-\omega_i\omega_g))\cos{\beta}\\
+I_{y'''',y''''}(\alpha_i + \omega_g\omega_w\cos{\beta})\\
+I_{z'''',z''''}(\alpha_g\cos{\beta}- \omega_i\omega_g\sin{\beta}-\omega_i\omega_w)
+\end{Bmatrix}
 \end{equation}
-
 \end{document}
