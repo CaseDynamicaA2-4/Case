@@ -99,25 +99,28 @@ $\begin{bmatrix}
 \end{bmatrix}$
 \subsection{Vraag 1}
 \textbf{Bereken de ogenblikkelijke totale rotatiesnelheidsvector $\vec{\omega}_{w}$ en rotatieversnellingsvector $\vec{\alpha}_{w}$ van het wiel.}\\
-
-
+We bereken $\vec{\omega}_{tot}$ door alle verschillende rotaties om te zetten naar eerst het $x'y'z'$-assenstel en vervolgens naar het $xyz$-assenstel.\\
+\\
 \begin{equation} 
 \begin{aligned}
 	\vec{\omega}_{w} &= \vec{\omega}_{g} + \vec{\omega}_{i} + \vec{\omega}_{w} \\
 	& = {\omega}_g * \vec{e}_{z'} + {\omega}_i * \vec{e}_{y''} +(-{\omega}_w)*\vec{e}_{x'''}\\
 	& =  {\omega}_g * \vec{e}_{z'} + {\omega}_i * \vec{e}_{y'} +(-{\omega}_w)*(\cos{\beta}*\vec{e'}_{x}-\sin(\beta)*\vec{e'}_{z})\\
 	&=\begin{Bmatrix}
-	\Big(-\omega_w*\cos(\beta)\Big)*\vec{e}_{x'} \\
+	\Big(-\omega_w*\cos{\beta}\Big)*\vec{e}_{x'} \\
 	\Big(\omega_i\Big)*\vec{e}_{y'}\\
-	\Big(\omega_g-\omega_w*\sin(\beta)\Big)*\vec{e}_{z'}
+	\Big(\omega_g-\omega_w \sin{\beta}\Big)*\vec{e}_{z'}
 	\end{Bmatrix}\\
 	& = \begin{Bmatrix}
-	\Big(- {\omega}_{w} * \cos(\beta)\Big)*\vec{e}_x \\
-	\Big(- {\omega}_{g} * \sin(\alpha) + {\omega}_{i} * \cos(\alpha) - {\omega}_{w} * \sin(\alpha)*\sin(\beta) \Big) *\vec{e}_y \\
+	\Big(- {\omega}_{w} * \cos{\beta}\Big)*\vec{e}_x \\
+	\Big(- {\omega}_{g} * \sin{\alpha} + {\omega}_{i} * \cos{\alpha} - {\omega}_{w} \sin{\alpha} \sin{\beta} \Big) *\vec{e}_y \\
 	\Big({\omega}_{g} * \cos(\alpha) + {\omega}_{i} * \sin(\alpha) + {\omega}_{w} * \cos(\alpha)*\sin(\beta)\Big) *\vec{e}_z
 	\end{Bmatrix} 
 \end{aligned}
 \end{equation}\\
+\\
+Voor de berekening van $\vec{\alpha}_{tot}$ gebruiken we dezelfde werkwijze.\\
+\\
 \begin{equation}
 \begin{aligned}
 \vec{\alpha}_{w} &= \frac{d\vec{\omega}_{g}}{dt} + \frac{d\vec{\omega}_{i}}{dt} + \frac{d\vec{\omega}_{w}}{dt}\\
@@ -128,34 +131,57 @@ $\begin{bmatrix}
 \Big(\alpha_g  -\alpha_w\sin{\beta}+ \omega_i\omega_w\cos(\beta)\Big)*\vec{e}_{z'}
 \end{Bmatrix}\\
 &=\begin{Bmatrix}
-\Big(- {\omega}_{g}  {\omega}_{i} + \alpha_w\cos(\beta) +\omega_i\omega_g\sin(\beta) \Big)* \vec{e}_{x} \\
-\Big((-\alpha_g  +\alpha_w\sin(\beta)- \omega_i\omega_w\cos(\beta)) \sin(\alpha) + (\alpha_i - \omega_g\omega_w\cos{\beta})\cos{\alpha}  \Big) * \vec{e}_{y} \\
-\Big((\alpha_i - \omega_g\omega_w\cos{\beta}\sin{\alpha} + (\alpha_g  -\alpha_w*\sin(\beta)+ \omega_i\omega_w\cos{\beta}) \cos{\alpha} \Big) * \vec{e}_{z}
+\Big(- {\omega}_{g}  {\omega}_{i} + \alpha_w\cos{\beta} +\omega_i\omega_g\sin{\beta} \Big)* \vec{e}_{x} \\
+\Big((-\alpha_g  +\alpha_w\sin{\beta}- \omega_i\omega_w\cos{\beta}) \sin{\alpha} + (\alpha_i - \omega_g\omega_w\cos{\beta})\cos{\alpha}  \Big) * \vec{e}_{y} \\
+\Big((\alpha_i - \omega_g\omega_w\cos{\beta}\sin{\alpha} + (\alpha_g  -\alpha_w*\sin{\beta}+ \omega_i\omega_w\cos{\beta}) \cos{\alpha} \Big) * \vec{e}_{z}
 \end{Bmatrix}
 \end{aligned}
 \end{equation}\\
-met \\
-$\vec{e'''}_{x} = cos(\beta) *\vec{e'}_{x} - sin(\beta) *\vec{e'}_{z}$\\
-$\vec{e'}_{x}=\vec{e}_{x}$\\
-$\vec{e''}_{y} = \vec{e'}_{y} $\\
-$\vec{e'}_{y} = \cos(\alpha)*\vec{e}_{y} + \sin(\alpha)*\vec{e}_z $\\
-$\vec{e'}_{z} = -\sin{\alpha}*\vec{e}_{y} + \cos{\alpha}*\vec{e}_z $\\
-$\frac{d\vec{e}_{z'}}{dt}=\vec{0}$\\
-$\omega_i * \frac{d\vec{e}_{y''}}{dt}=\vec{\omega_g}\times\vec{\omega_i} = -\omega_i * \omega_g *\vec{e}_{x'} = -\omega_i * \omega_g *\vec{e}_{x}  $\\
-$-\omega_w * \frac{d\vec{e}_{x'''}}{dt} = (\vec{\omega_i} + \vec{\omega_g})\times\vec{\omega_w} = \begin{vmatrix}
-\vec{e}_{x'}&\vec{e}_{y'}&\vec{e}_{z'}\\
-0 & \omega_i & \omega_g\\
--\omega_w \cos{\beta} & 0 & \omega_w \sin{\beta}
-\end{vmatrix} = \begin{Bmatrix}
-\omega_i \omega_w \sin(\beta)  *\vec{e}_{x'} \\
-\omega_g \omega_w \cos(\beta) *\vec{e}_{y'}\\
-\omega_i \omega_w \cos(\beta) *\vec{e}_{z'}
-\end{Bmatrix}
-$
+Voor de transformaties van de verschillende eenheidsvectoren leidden we volgende formules af \\
+\begin{center}
+	$\vec{e'''}_{x} = cos(\beta) *\vec{e'}_{x} - sin(\beta) *\vec{e'}_{z}$\\
+	$\vec{e'}_{x}=\vec{e}_{x}$\\
+	$\vec{e''}_{y} = \vec{e'}_{y} $\\
+	$\vec{e'}_{y} = \cos(\alpha)*\vec{e}_{y} + \sin(\alpha)*\vec{e}_z $\\
+	$\vec{e'}_{z} = -\sin{\alpha}*\vec{e}_{y} + \cos{\alpha}*\vec{e}_z $\\
+	$\frac{d\vec{e}_{z'}}{dt}=\vec{0}$\\
+	$\omega_i * \frac{d\vec{e}_{y''}}{dt}=\vec{\omega_g}\times\vec{\omega_i} = -\omega_i \omega_g *\vec{e}_{x'} = -\omega_i \omega_g *\vec{e}_{x}  $\\
+	$-\omega_w * \frac{d\vec{e}_{x'''}}{dt} = (\vec{\omega_i} + \vec{\omega_g})\times\vec{\omega_w} = \begin{vmatrix}
+	\vec{e}_{x'}&\vec{e}_{y'}&\vec{e}_{z'}\\
+	0 & \omega_i & \omega_g\\
+	-\omega_w \cos{\beta} & 0 & \omega_w \sin{\beta}
+	\end{vmatrix} = \begin{Bmatrix}
+	\omega_i \omega_w \sin(\beta)  *\vec{e}_{x'} \\
+	\omega_g \omega_w \cos(\beta) *\vec{e}_{y'}\\
+	\omega_i \omega_w \cos(\beta) *\vec{e}_{z'}
+	\end{Bmatrix}
+	$
+\end{center}
 \subsection{Vraag 2}
-
 \subsection{Vraag 3}
-
+\textbf{Wat is de bijdrage van de coriolisversnelling in deze versnelling ~ac als je het x”y”z”-assenstelsel als hulpassenstelsel gebruikt om de beweging te beschrijven?}
+\begin{equation}
+\vec{v}_{rel} =\begin{vmatrix}
+\vec{e}_{x''} & \vec{e}_{y''} & \vec{e}_{z''}
+0 & \omega_i & 0\\
+-\sin{\beta}l_3 - \cos{\beta} l_4 & 0 &-\cos{\beta} l_3 + \sin{\beta} l_3
+\end{vmatrix}
+\end{equation}
+\begin{equation}
+\begin{aligned}
+	Coriolisversnelling: 2*( \vec{v}_{rel} \times  \vec{\omega}) &= -2 *( \vec{\omega} \times \vec{v}_{rel})\\
+	&=2 * \begin{vmatrix}
+	\vec{e}_{x''} & \vec{e}_{y''} & \vec{e}_{z''}\\
+	0 & 0 & \omega_g \\
+	\omega_i  (l_4 \sin{\beta}-l_3  \cos{\beta}) & 0 & \omega_i l_4\cos{\beta} + l_3  \sin{\beta})
+	\end{vmatrix}\\
+	&= \begin{Bmatrix}
+	0 * \vec{e}_{x'}\\
+	\Big(2\omega_g\omega_i(l_4 \sin{\beta}-l_3  \cos{\beta})\Big)*\vec{e}_{y'}\\
+	0 * \vec{e}_{z'}\\
+	\end{Bmatrix}
+\end{aligned}
+\end{equation}
 
 \subsection{Vraag 4}
 \textbf{Bereken de ogenblikkelijke snelheid $\vec{v}_d$ en de ogenblikkelijke versnelling $\vec{a}_d$ van het punt D.}\\
@@ -167,18 +193,23 @@ Positie van D tov B uitgedrukt in het x''y''z''- assenstel\\
 	\Big (\frac{1}{4} l_4 \sin(\beta) - \frac{3}{4} l_3 \cos(\beta)\Big) * \vec{e}_{z''}
 	\end{Bmatrix}
 \end{equation}\\
-We berekennen $\vec{v}_d$ met mebehulp van samengestelde beweging.\\
+We berekennen $\vec{v}_d$ met mebehulp van samengestelde beweging ten opzichte van het $x''y''z''$.\\
 \begin{equation}
+\label{vd}
 \vec{v}_d = \vec{v}_b + \vec{\omega}_g \times \vec{r}_{d|b}  +\vec{v}_{rel}
 \end{equation}\\
+We berekenen eerst de snelheid van de oorsprong van het $x''y''z''$-assenstel (punt B)\\
 \begin{equation}
+\label{vb}
 \begin{aligned}
 \vec{v}_b &= \vec{v}_a + \vec{\omega}\times\vec{r}_{b|a} + \vec{v}_{rel}\\
 &= v_v  \vec{e}_{y''} + \vec{0} + \vec{\omega}_g \times * (l) *\vec{e}_{x'}\\
 &= (v_v + \omega_g * l_1)*\vec{e}_{y''}
 \end{aligned}
 \end{equation}\\
+\\
 \begin{equation}
+\label{wrd}
 \begin{aligned}
 \vec{\omega}_g \times \vec{r}_{d|b} & = \begin{vmatrix}
 \vec{e}_{x''}& \vec{e}_{y''} & \vec{e}_{z''}\\
@@ -192,7 +223,9 @@ We berekennen $\vec{v}_d$ met mebehulp van samengestelde beweging.\\
 \end{Bmatrix}
 \end{aligned}
 \end{equation}\\
+Tot slot berekenen we de snelheid van het punt D gezien door een waarnemer die meebeweegt met het bewegend $x''y''z''$-assenstel.\\
 \begin{equation}
+\label{vrel}
 \begin{aligned}
 \vec{v}_{rel} &= \vec{\omega}_i \times \vec{r}_{d|b} \\
 &=\begin{vmatrix}
@@ -207,6 +240,7 @@ We berekennen $\vec{v}_d$ met mebehulp van samengestelde beweging.\\
 \end{Bmatrix}
 \end{aligned}
 \end{equation}
+Als we \ref{vb}, \ref{wrd} en \ref{vd} invullen in \ref{vd} vinden.\\
 \begin{equation}
 \vec{v}_d = \begin{Bmatrix}
 \Big(\omega_i (\frac{1}{4} l_4 \sin{\beta}-\frac{3}{4} l_3  \cos{\beta})\Big) * \vec{e}_{x''}\\
@@ -214,22 +248,25 @@ We berekennen $\vec{v}_d$ met mebehulp van samengestelde beweging.\\
 \Big(-\omega_i (\frac{-1}{4} l_4 \cos{\beta} - \frac{3}{4} l_3  \sin{\beta}) \Big)*\vec{e}_{z''}
 \end{Bmatrix}
 \end{equation}
+Door dit te transformeren(door te vermenigvuldigen met $T_1$) naar het xyz-assenstel vinden we: \\
 \begin{equation}
 \vec{v}_d = \begin{Bmatrix}
 \Big(\omega_i  (\frac{1}{4}l_4 \sin{\beta}-\frac{3}{4}l_3  \cos{\beta})\Big) * \vec{e}_{x}\\
 \Big(\big(v_v + \omega_g  l_1 + \omega_g(\frac{-1}{4} l_4 \cos{\beta}-\frac{3}{4} l_3 \sin{\beta}) \big) \cos{\alpha}  + \sin{\alpha}  \omega_i  \big( \frac{-1}{4}l_4 \cos{\beta} - \frac{3}{4}l_3 \sin{\beta}\big)\Big)*\vec{e}_{y} \\
 \Big(\big(v_v + \omega_g   l_1 + \omega_g (\frac{-1}{4} l_4 \cos{\beta}-\frac{3}{4} l_3 \sin{\beta}) \big) \sin{\alpha}  + \cos{\alpha}  \omega_i   \big( \frac{-1}{4} l_4 \cos{\beta} - \frac{3}{4}l_3 \sin{\beta}\big)\Big)*\vec{e}_{z}
 \end{Bmatrix}
-\end{equation}
+\end{equation}\\
+Nu berekennen we $\vec{a}_d$\\
 \begin{equation}
 	\begin{aligned}
 		\vec{a}_d &= \vec{a}_b + \vec{\alpha} \times  \vec{r}_{d|b} + \omega_g \times (\omega_g \times \vec{r}_{d|b}) + \vec{a}_{rel} + 2* (\omega_g \times \vec{v}_r)\\
 	\end{aligned}
 \end{equation}
-met\\
+\\
+We bereken de versnelling van het punt B door middel van samengestelde beweging door een assenstel dat meebeweegt met de gierbeweging en vast aan het punt A: \\
 \begin{equation}
 \begin{aligned}
-\vec{a}_b &= \vec{a}_a + \vec{\alpha}_g  \times \vec{r}_{b|a} + \vec{\omega}_g \times (\vec{\omega}_g \times \vec{r}_{b|a}) + \vec{a}_{rel}\\
+\vec{a}_b &= \vec{a}_a + \vec{\alpha}_g  \times \vec{r}_{b|a} + \vec{\omega}_g \times (\vec{\omega}_g \times \vec{r}_{b|a}) + \vec{a}_{rel} + 2(\omega \times \vec{v}_{rel})\\
 &= a_v * \vec{e}_{y'} + (\alpha_g * \vec{e}_{z'} + \omega_g *\dfrac{d\vec{e}_{z'}}{dt}) \times l_1 \vec{e}_{x'} + \omega_{g} *\vec{e}_{z'} \times (\omega_{g} *\vec{e}_{z'}  \times l_1 \vec{e}_{x'})\\
 & = \begin{Bmatrix}
 -\omega^{2}_g l_1 * \vec{e}_{x'}\\
@@ -254,7 +291,7 @@ met\\
 \end{equation}
 \begin{equation}
 	\begin{aligned}
-	\omega_g \times (\omega_g \times \vec{r}_{d|b}) &= \omega_g \vec{e}_{z'} \times (\omega_g (\frac{-1}{4} l_4 \cos{\beta}-\frac{3}{4} l_3 \sin{\beta}))\\
+	\vec{\omega}_g \times (\vec{\omega}_g \times \vec{r}_{d|b}) &= \omega_g \vec{e}_{z'} \times \Big(\omega_g (\frac{-1}{4} l_4 \cos{\beta}-\frac{3}{4} l_3 \sin{\beta})\vec{e}_{y'}\Big)\\
 	& = \begin{Bmatrix}
 	\Big(\omega_{g}^{2} (\frac{-1}{4} l_4 \cos{\beta}-\frac{3}{4} l_3 \sin{\beta})\Big) * \vec{e}_{x'}\\
 	0*\vec{e}_{y'}\\
@@ -270,11 +307,13 @@ met\\
 	-\omega_g\omega_i & \alpha_i & 0 \\
 	\frac{-1}{4} l_4 \cos{\beta} - \frac{3}{4}*l_3 * \sin{\beta} & 0 &\frac{1}{4} l_4 \sin{\beta}-\frac{3}{4} l_3 * \cos{\beta}
 	\end{vmatrix} + \\
+	\\
 	&\begin{vmatrix}
 	\vec{e}_{x'} & \vec{e}_{y'} & \vec{e}_{z'}\\
 	0 & \omega_i & 0 \\
 	\omega_i (\frac{1}{4} l_4 \sin{\beta}-\frac{3}{4} l_3  \cos{\beta}) & 0 &\omega_i (\frac{1}{4} l_4  \sin{\beta}-\frac{3}{4} l_3   \cos{\beta})
 	\end{vmatrix}\\
+	\\
 	&= \begin{Bmatrix}
 	\Big(\alpha_i(\frac{1}{4} l_4  \sin{\beta}-\frac{3}{4} l_3  \cos{\beta}) + \omega_i^2 (\frac{1}{4} l_4  \sin{\beta}-\frac{3}{4} l_3  \cos{\beta})\Big)*\vec{e}_{x'}\\
 	\Big(\omega_g\omega_i(\frac{1}{4} l_4  \sin{\beta}-\frac{3}{4} l_3  \cos{\beta})\Big)*\vec{e}_{y'}\\
@@ -282,7 +321,7 @@ met\\
 	\end{Bmatrix}
 	\end{aligned}
 \end{equation}
-En tot slot de corrioliskracht:
+En tot slot de complementaire versnelling:
 \begin{equation}
 \begin{aligned}
 2(\vec{\omega}_g \times \vec{v}_{rel}) &= 2 * \begin{vmatrix}
@@ -300,14 +339,14 @@ En tot slot de corrioliskracht:
 \begin{equation}
 \begin{aligned}
 &=\begin{Bmatrix}
-\Big( -\omega^{2}_g l_1 +\omega_{g}^{2} * (\frac{-1}{4}*l_4*\cos{\beta}-\frac{3}{4}*l_3*\sin{\beta})+\alpha_i(\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta})\\ + \omega_i^2*(\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta}) \Big)* \vec{e}_{x'}\\
-\Big(a_v +\alpha_g l_1 +\alpha_g *({-\frac{1}{4}}  l_4 \cos(\beta)-\frac{3}{4}l_3*\sin(\beta)) + 3\omega_g\omega_i(\frac{1}{4}l_4 \sin{\beta}-\frac{3}{4}l_3  \cos{\beta})\Big)*\vec{e}_{y'}\\
-\Big(\alpha_i * (\frac{1}{4}*l_4*\cos{\beta} - \frac{3}{4}*l_3 * \sin{\beta}) - \omega_i^2(\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta})\Big)*\vec{e}_{z'}
+\Big( -\omega^{2}_g l_1 +\omega_{g}^{2}  (\frac{-1}{4} l_4 \cos{\beta}-\frac{3}{4} l_3 sin{\beta})+\alpha_i(\frac{1}{4} l_4 \sin{\beta}-\frac{3}{4} l_3 \cos{\beta})\\ + \omega_i^2 (\frac{1}{4} l_4 \sin{\beta}-\frac{3}{4} l_3  \cos{\beta}) \Big)* \vec{e}_{x'}\\
+\Big(a_v +\alpha_g l_1 +\alpha_g ({-\frac{1}{4}} l_4 \cos(\beta)-\frac{3}{4}l_3*\sin(\beta)) + 3\omega_g\omega_i(\frac{1}{4}l_4 \sin{\beta}-\frac{3}{4}l_3  \cos{\beta})\Big)*\vec{e}_{y'}\\
+\Big(\alpha_i (\frac{1}{4} l_4 \cos{\beta} - \frac{3}{4} l_3  \sin{\beta}) - \omega_i^2(\frac{1}{4} l_4 \sin{\beta} - \frac{3}{4} l_3 \cos{\beta})\Big)*\vec{e}_{z'}
 \end{Bmatrix}\\
 &= \begin{Bmatrix}
 \Big( -\omega^{2}_g l_1 +\omega_{g}^{2} * (\frac{-1}{4}*l_4*\cos{\beta}-\frac{3}{4}*l_3*\sin{\beta})+\alpha_i(\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta})\\ + \omega_i^2*(\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta}) \Big)* \vec{e}_{x}\\
-\Huge(\Big(a_v +\alpha_g l_1 +\alpha_g *({-\frac{1}{4}}  l_4 \cos(\beta)-\frac{3}{4}l_3*\sin(\beta)) + 3\omega_g\omega_i(\frac{1}{4}l_4 \sin{\beta}-\frac{3}{4}l_3  \cos{\beta})\Big)\cos{\alpha}\\ + \Big(\alpha_i * (\frac{1}{4} l_4 \cos{\beta} - \frac{3}{4} l_3 \sin{\beta}) - \omega_i^2(\frac{1}{4} l_4 \sin{\beta}-\frac{3}{4} l_3  \cos{\beta})\Big)*(-\sin{\alpha}\Huge)*\vec{e}_{y}\\
-\Huge(\Big(a_v +\alpha_g l_1 +\alpha_g *({-\frac{1}{4}}  l_4 \cos(\beta)-\frac{3}{4}l_3 \sin(\beta)) + 3\omega_g\omega_i(\frac{1}{4}l_4 \sin{\beta}-\frac{3}{4}l_3  \cos{\beta})\Big)\sin{\alpha}\\ + \Big(\alpha_i (\frac{1}{4} l_4 \cos{\beta} - \frac{3}{4} l_3 \sin{\beta}) - \omega_i^2(\frac{1}{4} l_4 \sin{\beta}-\frac{3}{4} l_3   \cos{\beta})\Big) (\cos{\alpha}\Huge)*\vec{e}_{z}
+\Bigg(\Big(a_v +\alpha_g l_1 +\alpha_g *({-\frac{1}{4}}  l_4 \cos(\beta)-\frac{3}{4}l_3*\sin(\beta)) + 3\omega_g\omega_i(\frac{1}{4}l_4 \sin{\beta}-\frac{3}{4}l_3  \cos{\beta})\Big)\cos{\alpha}\\ + \Big(\alpha_i * (\frac{1}{4} l_4 \cos{\beta} - \frac{3}{4} l_3 \sin{\beta}) - \omega_i^2(\frac{1}{4} l_4 \sin{\beta}-\frac{3}{4} l_3  \cos{\beta})\Big)*-\sin{\alpha}\Bigg)*\vec{e}_{y}\\
+\Bigg(\Big(a_v +\alpha_g l_1 +\alpha_g *({-\frac{1}{4}}  l_4 \cos(\beta)-\frac{3}{4}l_3 \sin(\beta)) + 3\omega_g\omega_i(\frac{1}{4}l_4 \sin{\beta}-\frac{3}{4}l_3  \cos{\beta})\Big)\sin{\alpha}\\ + \Big(\alpha_i (\frac{1}{4} l_4 \cos{\beta} - \frac{3}{4} l_3 \sin{\beta}) - \omega_i^2(\frac{1}{4} l_4 \sin{\beta}-\frac{3}{4} l_3   \cos{\beta})\Big) \cos{\alpha}\Bigg)*\vec{e}_{z}
 \end{Bmatrix}
 \end{aligned}
 \end{equation}
@@ -324,6 +363,16 @@ En tot slot de corrioliskracht:
 \end{Bmatrix}
 \end{aligned}
 \end{equation} 
+\begin{equation}
+\begin{aligned}
+	\big(\dfrac{d\vec{p}_d}{dt}\big) &= m *\vec{a}_d\\
+	&= m * \begin{Bmatrix}
+	\Big( -\omega^{2}_g l_1 +\omega_{g}^{2} * (\frac{-1}{4}*l_4*\cos{\beta}-\frac{3}{4}*l_3*\sin{\beta})+\alpha_i(\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta})\\ + \omega_i^2*(\frac{1}{4}*l_4 *\sin{\beta}-\frac{3}{4}*l_3 * \cos{\beta}) \Big)* \vec{e}_{x}\\
+	\Bigg(\Big(a_v +\alpha_g l_1 +\alpha_g *({-\frac{1}{4}}  l_4 \cos(\beta)-\frac{3}{4}l_3*\sin(\beta)) + 3\omega_g\omega_i(\frac{1}{4}l_4 \sin{\beta}-\frac{3}{4}l_3  \cos{\beta})\Big)\cos{\alpha}\\ + \Big(\alpha_i * (\frac{1}{4} l_4 \cos{\beta} - \frac{3}{4} l_3 \sin{\beta}) - \omega_i^2(\frac{1}{4} l_4 \sin{\beta}-\frac{3}{4} l_3  \cos{\beta})\Big)*-\sin{\alpha}\Bigg)*\vec{e}_{y}\\
+	\Bigg(\Big(a_v +\alpha_g l_1 +\alpha_g *({-\frac{1}{4}}  l_4 \cos(\beta)-\frac{3}{4}l_3 \sin(\beta)) + 3\omega_g\omega_i(\frac{1}{4}l_4 \sin{\beta}-\frac{3}{4}l_3  \cos{\beta})\Big)\sin{\alpha}\\ + \Big(\alpha_i (\frac{1}{4} l_4 \cos{\beta} - \frac{3}{4} l_3 \sin{\beta}) - \omega_i^2(\frac{1}{4} l_4 \sin{\beta}-\frac{3}{4} l_3   \cos{\beta})\Big) \cos{\alpha}\Bigg)*\vec{e}_{z}
+	\end{Bmatrix}
+\end{aligned}
+\end{equation}
 \subsection{Vraag 2}
 \textbf{Bereken de ogenblikkelijke impulsmomentvector en de verandering van de impulsmometvector van het landingsgestel en die van het wiel rond hun respectievelijke massacentra.}
 \begin{equation}
