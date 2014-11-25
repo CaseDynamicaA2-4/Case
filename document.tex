@@ -161,7 +161,7 @@ Voor de transformaties van de verschillende eenheidsvectoren leidden we volgende
 \textbf{We berekenen de ogenblikkelijke totaal snelheid $\vec{v}_c$ en de ogenblikkelijke versnelling $\vec{a}_c$ van het punt c.}\\
 \begin{equation}
 	\vec{r}_{A|C} \mapsto \begin{Bmatrix}
-		\Big({l_1 - l_1 \cos(\beta)-l_1 \sin(\beta)\Big)*\vec{e}_{x'}}\\
+		\Big({l_1 - l_4 \cos(\beta)-l_3 \sin(\beta)\Big)*\vec{e}_{x'}}\\
 		0 * \vec{e}_{y'}\\
 		\Big ({l_2 - l_3*\cos(\beta) + l_4 *\sin(\beta)\Big) * \vec{e}_{z'}}
 	\end{Bmatrix}
@@ -182,11 +182,10 @@ Voor de transformaties van de verschillende eenheidsvectoren leidden we volgende
 		\vec{\omega}_g \times \vec{r}_{A|C(t.o.v x'y'z')} & = \begin{vmatrix}
 			\vec{e}_{x'}& \vec{e}_{y'} & \vec{e}_{z'}\\
 			0 & 0 & \omega_g \\
-			\ -l_1 + l_3 * \sin{\beta} + l_4*\cos{\beta} & 0 & (l_3-l_2) - l_3 * \cos{\beta}
-			- l_4 * \sin{\beta} \end{vmatrix}\\
+			\ l_1 - l_3 * \sin{\beta} - l_4*\cos{\beta} & 0 & l_2 - l_3 * \cos{\beta} + l_4 * \cos{\beta}\end{vmatrix}\\
 		&= \begin{Bmatrix}
 			0 *\vec{e}_{x'}\\
-			\Big(\omega_g*(-l_1+l_4*\cos{\beta} + l_3 * \sin{\beta})\Big)*\vec{e}_{y'}\\
+			\Big(\omega_g*(l_1-l_4*\cos{\beta} - l_3 * \sin{\beta})\Big)*\vec{e}_{y'}\\
 			0 * \vec{e}_{z'}
 		\end{Bmatrix}
 	\end{aligned}
@@ -200,8 +199,8 @@ Voor de transformaties van de verschillende eenheidsvectoren leidden we volgende
 \begin{equation}
 	\begin{Bmatrix}
 		{0\vec{e}_{x}}\\
-		\Big(-l_1+l_3*\sin(\beta)+l_4*\cos(\beta)\Big)*\omega_g*\cos(\beta) \vec{e}_{y}\\
-		\Big{(-l_1+l_3*\sin(\beta)+l_4*\cos(\beta)\Big)*\omega_g*\sin(\beta)\vec{e}_{z}}
+		\Big(l_1-l_3*\sin(\beta)-l_4*\cos(\beta)\Big)*\omega_g*\cos(\alpha) \vec{e}_{y}\\
+		\Big{(l_1-l_3*\sin(\beta)-l_4*\cos(\beta)\Big)*\omega_g*\sin(\beta)\vec{e}_{z}}
 	\end{Bmatrix}
 \end{equation}\\
 \begin{equation}
@@ -209,10 +208,10 @@ Voor de transformaties van de verschillende eenheidsvectoren leidden we volgende
 		\vec{\omega}_i \times \vec{r}_{B|C(t.o.v x'y'z')} & = \begin{vmatrix}
 			\vec{e}_{x'}& \vec{e}_{y'} & \vec{e}_{z'}\\
 			0 & \omega_i & 0 \\
-			\  l_3 * \sin(\beta) + l_4 * \cos(\beta) & 0 &  l_3 -l_3*\sin(\beta) - l_4 *\sin(\beta)
+			\  -l_3 * \sin(\beta) - l_4 * \cos(\beta) & 0 &  -l_3*\sin(\beta) + l_4 *\sin(\beta)
 		\end{vmatrix}\\
 		&= \begin{Bmatrix}
-			\omega_i*\Big(l_3 -l_3*\sin(\beta) - l_4 *\sin(\beta)\Big) *\vec{e}_{x}\\
+			\omega_i*\Big(-l_3*\sin(\beta) + l_4 *\sin(\beta)\Big) *\vec{e}_{x}\\
 			0*\vec{e}_{y}\\
 			\omega_i*\Big(l_3 * \sin(\beta) + l_4 * \cos(\beta)\Big) \vec{e}_{z}
 		\end{Bmatrix}
@@ -226,9 +225,9 @@ Voor de transformaties van de verschillende eenheidsvectoren leidden we volgende
 \end{equation}\\
 \begin{equation}
 	\begin{Bmatrix}
-		{\omega_i*\Big(l_3 -l_3*\sin(\beta) - l_4 *\sin(\beta)\Big)\vec{e}_{x}}\\
-		\Big(l_3 * \sin(\beta) + l_4 * \cos(\beta)\Big)*\sin(\alpha) *\omega_i *\vec{e}_{y}\\
-		-\Big{(l_3 * \sin(\beta) + l_4 * \cos(\beta)\Big)*\cos(\alpha) *\omega_i*\vec{e}_{z}}
+		{\omega_i*\Big( -l_3*\cos(\beta) + l_4 *\sin(\beta)\Big)\vec{e}_{x}}\\
+		\Big(-l_3 * \sin(\beta)- l_4 * \cos(\beta)\Big)*\sin(\alpha) *\omega_i *\vec{e}_{y}\\
+		\Big{(l_3 * \sin(\beta) + l_4 * \cos(\beta)\Big)*\cos(\alpha) *\omega_i*\vec{e}_{z}}
 	\end{Bmatrix}
 \end{equation}\\
 \begin{equation}
@@ -270,115 +269,115 @@ Voor de transformaties van de verschillende eenheidsvectoren leidden we volgende
 \begin{equation}
 	\begin{aligned}
 		{T}_{1}*\vec{\alpha}_g \times \vec{r}_{A|C(t.o.v x'y'z')} = \begin{Bmatrix}
-		{0\vec{e}_{x}}\\
-		\cos(\alpha)*	\alpha_g \Big(l_1 - l_3 \sin(\beta) - l_4 \cos(\beta)\Big)*\vec{e}_{y}\\
-		\sin(\alpha)*	\alpha_g \Big(l_1 - l_3 \sin(\beta) - l_4 \cos(\beta)\Big)*\vec{e}_{z}
+			{0\vec{e}_{x}}\\
+			\cos(\alpha)*	\alpha_g \Big(l_1 - l_3 \sin(\beta) - l_4 \cos(\beta)\Big)*\vec{e}_{y}\\
+			\sin(\alpha)*	\alpha_g \Big(l_1 - l_3 \sin(\beta) - l_4 \cos(\beta)\Big)*\vec{e}_{z}
 		\end{Bmatrix}
 	\end{aligned}
 \end{equation}\\
 \begin{equation}
-\begin{aligned}
-\vec{\alpha}_i \times \vec{r}_{B|C(t.o.v x'y'z')}  &=  \begin{Vmatrix}
-\vec{e}_{x'}& \vec{e}_{y'} & \vec{e}_{z'}\\
-0 & \alpha_i & 0 \\		
-\Big(- l_3 \sin(\beta) - l_4 \cos(\beta)\Big) &
-0 & \Big (- l_3 \cos(\beta) + l_4 \sin(\beta) \Big) 
-\end{Vmatrix}\\
-&= \begin{Bmatrix}
-\alpha_i \Big(- l_3 \cos(\beta) + l_4 \sin(\beta)\Big)*\vec{e}_{x'}\\
-0*\vec{e}_{y'}\\
-\alpha_i \Big(l_3 \sin(\beta) + l_4 \cos(\beta)\Big)*\vec{e}_{z'}
-\end{Bmatrix}
-\end{aligned}
+	\begin{aligned}
+		\vec{\alpha}_i \times \vec{r}_{B|C(t.o.v x'y'z')}  &=  \begin{Vmatrix}
+			\vec{e}_{x'}& \vec{e}_{y'} & \vec{e}_{z'}\\
+			0 & \alpha_i & 0 \\		
+			\Big(- l_3 \sin(\beta) - l_4 \cos(\beta)\Big) &
+			0 & \Big (- l_3 \cos(\beta) + l_4 \sin(\beta) \Big) 
+		\end{Vmatrix}\\
+		&= \begin{Bmatrix}
+			\alpha_i \Big(- l_3 \cos(\beta) + l_4 \sin(\beta)\Big)*\vec{e}_{x'}\\
+			0*\vec{e}_{y'}\\
+			\alpha_i \Big(l_3 \sin(\beta) + l_4 \cos(\beta)\Big)*\vec{e}_{z'}
+		\end{Bmatrix}
+	\end{aligned}
 \end{equation}
 \textbf{Omzetten naar het xyz - assenstel via $T_1$}
 \begin{equation}
-\begin{aligned}
-{T}_{1}*\vec{\alpha}_i \times \vec{r}_{B|C(t.o.v x'y'z')} = \begin{Bmatrix}
-{\alpha_i \Big(- l_3 \cos(\beta) + l_4 \sin(\beta)\Big)*\vec{e}_{x}}\\
--\sin(\alpha)*	\alpha_i \Big(l_3 \sin(\beta) + l_4 \cos(\beta)\Big)*\vec{e}_{y}\\
-\cos(\alpha)*\alpha_i \Big(l_3 \sin(\beta) + l_4 \cos(\beta)\Big)*\vec{e}_{z}
-\end{Bmatrix}
+	\begin{aligned}
+		{T}_{1}*\vec{\alpha}_i \times \vec{r}_{B|C(t.o.v x'y'z')} = \begin{Bmatrix}
+			{\alpha_i \Big(- l_3 \cos(\beta) + l_4 \sin(\beta)\Big)*\vec{e}_{x}}\\
+			-\sin(\alpha)*	\alpha_i \Big(l_3 \sin(\beta) + l_4 \cos(\beta)\Big)*\vec{e}_{y}\\
+			\cos(\alpha)*\alpha_i \Big(l_3 \sin(\beta) + l_4 \cos(\beta)\Big)*\vec{e}_{z}
+		\end{Bmatrix}
+	\end{aligned}
+\end{equation}\\
+\begin{equation}
+	\begin{aligned}
+		\vec{V}_A = {T}_{1}* \begin{Bmatrix}
+			{0*\vec{e}_{x}}\\
+			\vec{V}_v*\vec{e}_{y}\\
+			0*\vec{e}_{z}
+		\end{Bmatrix} = \begin{Bmatrix}
+		{0*\vec{e}_{x}}\\
+		V_v*\cos(\alpha)*\vec{e}_{y}\\
+		V_v*\sin(\alpha)*\vec{e}_{z}
+	\end{Bmatrix}
 \end{aligned}
 \end{equation}\\
 \begin{equation}
-\begin{aligned}
-\vec{V}_A = {T}_{1}* \begin{Bmatrix}
-{0*\vec{e}_{x}}\\
-\vec{V}_v*\vec{e}_{y}\\
-0*\vec{e}_{z}
-\end{Bmatrix} = \begin{Bmatrix}
-{0*\vec{e}_{x}}\\
-V_v*\cos(\alpha)*\vec{e}_{y}\\
-V_v*\sin(\alpha)*\vec{e}_{z}
-\end{Bmatrix}
-\end{aligned}
+	\begin{aligned}
+		\vec{V}_C -\vec{V}_A = \begin{Bmatrix}
+			{\omega_i*\Big( - l_3 \cos(\beta) + l_4 \sin(\beta)\Big)\vec{e}_{x}}\\
+			\Big(\cos(\alpha)*\omega_g \Big(l_1 - l_3 \sin(\beta) - l_4 \cos(\beta)\Big) -\sin(\alpha)*	\omega_i \Big(l_3 \sin(\beta) + l_4 \cos(\beta)\Big)\Big)*\vec{e}_{y}\\
+			\Big(\sin(\alpha)*\omega_g \Big(l_1 - l_3 \sin(\beta) - l_4 \cos(\beta)\Big) +\cos(\alpha)*	\omega_i \Big(l_3 \sin(\beta) + l_4 \cos(\beta)\Big)\Big)*\vec{e}_{z}
+		\end{Bmatrix} 
+	\end{aligned}
 \end{equation}\\
 \begin{equation}
-\begin{aligned}
-\vec{V}_C -\vec{V}_A = \begin{Bmatrix}
-{\omega_i*\Big( - l_3 \cos(\beta) + l_4 \sin(\beta)\Big)\vec{e}_{x}}\\
-\Big(\cos(\alpha)*\omega_g \Big(l_1 - l_3 \sin(\beta) - l_4 \cos(\beta)\Big) -\sin(\alpha)*	\omega_i \Big(l_3 \sin(\beta) + l_4 \cos(\beta)\Big)\Big)*\vec{e}_{y}\\
-\Big(\sin(\alpha)*\omega_g \Big(l_1 - l_3 \sin(\beta) - l_4 \cos(\beta)\Big) +\cos(\alpha)*	\omega_i \Big(l_3 \sin(\beta) + l_4 \cos(\beta)\Big)\Big)*\vec{e}_{z}
-\end{Bmatrix} 
-\end{aligned}
+	\begin{aligned}
+		\vec{V}_B = {T}_{1}* \Big(\begin{Bmatrix}
+			{0*\vec{e}_{x}}\\
+			\vec{V}_v*\vec{e}_{y}\\
+			0*\vec{e}_{z} 
+		\end{Bmatrix} + \vec{\omega}_g \times \vec{r}_{A|B(t.o.v x'y'z')}\Big)
+	\end{aligned}
 \end{equation}\\
 \begin{equation}
-\begin{aligned}
-\vec{V}_B = {T}_{1}* \Big(\begin{Bmatrix}
-{0*\vec{e}_{x}}\\
-\vec{V}_v*\vec{e}_{y}\\
-0*\vec{e}_{z} 
-\end{Bmatrix} + \vec{\omega}_g \times \vec{r}_{A|B(t.o.v x'y'z')}\Big)
-\end{aligned}
+	\begin{aligned}
+		\vec{\omega}_g \times \vec{r}_{A|B(t.o.v x'y'z')} =  \begin{Vmatrix}
+			\vec{e}_{x'}& \vec{e}_{y'} & \vec{e}_{z'}\\
+			0 & 0 &  \omega_g \\		
+			l_1 &
+			0 & l_2
+		\end{Vmatrix}\\
+	\end{aligned}
 \end{equation}\\
 \begin{equation}
-\begin{aligned}
-\vec{\omega}_g \times \vec{r}_{A|B(t.o.v x'y'z')} =  \begin{Vmatrix}
-\vec{e}_{x'}& \vec{e}_{y'} & \vec{e}_{z'}\\
-0 & 0 &  \omega_g \\		
-l_1 &
-0 & l_2
-\end{Vmatrix}\\
-\end{aligned}
+	\begin{aligned}
+		\vec{V}_B = {T}_{1}* \begin{Bmatrix}
+			{0*\vec{e}_{x}}\\
+			\cos(\alpha)\Big(\vec{V}_v + l_1*\omega_g \Big)*\vec{e}_{y}\\
+			\sin(\alpha)\Big(\vec{V}_v + l_1*\omega_g\Big)*\vec{e}_{z} 
+		\end{Bmatrix}
+	\end{aligned}
 \end{equation}\\
 \begin{equation}
-\begin{aligned}
-\vec{V}_B = {T}_{1}* \begin{Bmatrix}
-{0*\vec{e}_{x}}\\
-\cos(\alpha)\Big(\vec{V}_v + l_1*\omega_g \Big)*\vec{e}_{y}\\
-\sin(\alpha)\Big(\vec{V}_v + l_1*\omega_g\Big)*\vec{e}_{z} 
-\end{Bmatrix}
-\end{aligned}
-\end{equation}\\
-\begin{equation}
-\begin{aligned}
-\vec{a}_v = {T}_{1}* \begin{Bmatrix}
-{0*\vec{e}_{x}}\\
-a_v*\vec{e}_{y}\\
-0*\vec{e}_{z} 
-\end{Bmatrix} = \begin{Bmatrix}
-{0*\vec{e}_{x}}\\
-a_v*\cos(\alpha)*\vec{e}_{y}\\
-a_v*\sin(\alpha)*\vec{e}_{z} 
-\end{Bmatrix}
+	\begin{aligned}
+		\vec{a}_v = {T}_{1}* \begin{Bmatrix}
+			{0*\vec{e}_{x}}\\
+			a_v*\vec{e}_{y}\\
+			0*\vec{e}_{z} 
+		\end{Bmatrix} = \begin{Bmatrix}
+		{0*\vec{e}_{x}}\\
+		a_v*\cos(\alpha)*\vec{e}_{y}\\
+		a_v*\sin(\alpha)*\vec{e}_{z} 
+	\end{Bmatrix}
 \end{aligned}
 \end{equation}\\
 \textbf{De totale versnelling $\vec{a}_c$ is dan:}
 \begin{equation}
-\begin{Bmatrix}
-	{\Big(\alpha_i*\Big( - l_3 \cos(\beta) + l_4 \sin(\beta)\Big) - \omega_g^{2}*\Big(l_1 - l_3 \sin(\beta) - l_4 \cos(\beta)\Big) +\omega_i^{2}*\Big(l_3 \sin(\beta) + l_4 \cos(\beta)\Big)\Big)*\vec{e}_{x}}\\
-	\Big(\alpha_g*\cos(\alpha)*\Big(l_1 - l_3 \sin(\beta) - l_4 \cos(\beta)\Big) - 	\alpha_i*\sin(\alpha)*\Big(l_3 \sin(\beta) + l_4 \cos(\beta)\Big) + \vec{a}_v*\cos(\alpha)\Big)*\vec{e}_{y}\\	
-	\Big(\alpha_g*\sin(\alpha)*\Big(l_1 - l_3 \sin(\beta) - l_4 \cos(\beta)\Big) + 	\alpha_i*\cos(\alpha)*\Big(l_3 \sin(\beta) + l_4 \cos(\beta)\Big)+\vec{a}_v*\sin(\alpha)\Big)*\vec{e}_{z} 
-\end{Bmatrix} 
+	\begin{Bmatrix}
+		{\Big(\alpha_i*\Big( - l_3 \cos(\beta) + l_4 \sin(\beta)\Big) - \omega_g^{2}*\Big(l_1 - l_3 \sin(\beta) - l_4 \cos(\beta)\Big) +\omega_i^{2}*\Big(l_3 \sin(\beta) + l_4 \cos(\beta)\Big)\Big)*\vec{e}_{x}}\\
+		\Big(\alpha_g*\cos(\alpha)*\Big(l_1 - l_3 \sin(\beta) - l_4 \cos(\beta)\Big) - 	\alpha_i*\sin(\alpha)*\Big(l_3 \sin(\beta) + l_4 \cos(\beta)\Big) + \vec{a}_v*\cos(\alpha)\Big)*\vec{e}_{y}\\	
+		\Big(\alpha_g*\sin(\alpha)*\Big(l_1 - l_3 \sin(\beta) - l_4 \cos(\beta)\Big) + 	\alpha_i*\cos(\alpha)*\Big(l_3 \sin(\beta) + l_4 \cos(\beta)\Big)+\vec{a}_v*\sin(\alpha)\Big)*\vec{e}_{z} 
+	\end{Bmatrix} 
 \end{equation}\\
 \begin{equation}
-+ \begin{Bmatrix}
-	{0*\vec{e}_{x}}\\
-	\Big(\omega_g * \omega_i*\cos(\alpha)*\Big( - l_3 \cos(\beta) + l_4 \sin(\beta)\Big) + \omega_i^2*\sin(\alpha)*\Big( - l_3 \cos(\beta) + l_4 \sin(\beta)\Big)\Big) *\vec{e}_{y}\\
-	\Big(-\omega_g * \omega_i*\sin(\alpha)*\Big( - l_3 \cos(\beta) + l_4 \sin(\beta)\Big) - \omega_i^2*\cos(\alpha)*\Big( - l_3 \cos(\beta) + l_4 \sin(\beta)\Big)\Big)*\vec{e}_{z} 
-\end{Bmatrix}
-\end{equation}\\	
+	+ \begin{Bmatrix}
+		{0*\vec{e}_{x}}\\
+		\Big(\omega_g * \omega_i*\cos(\alpha)*\Big( - l_3 \cos(\beta) + l_4 \sin(\beta)\Big) + \omega_i^2*\sin(\alpha)*\Big( - l_3 \cos(\beta) + l_4 \sin(\beta)\Big)\Big) *\vec{e}_{y}\\
+		\Big(-\omega_g * \omega_i*\sin(\alpha)*\Big( - l_3 \cos(\beta) + l_4 \sin(\beta)\Big) - \omega_i^2*\cos(\alpha)*\Big( - l_3 \cos(\beta) + l_4 \sin(\beta)\Big)\Big)*\vec{e}_{z} 
+	\end{Bmatrix}
+\end{equation}\\		
 
 \subsection{Vraag 3}
 \textbf{Wat is de bijdrage van de coriolisversnelling in deze versnelling ~ac als je het x”y”z”-assenstelsel als hulpassenstelsel gebruikt om de beweging te beschrijven?}
@@ -673,4 +672,53 @@ I_{y'''',y''''}(\alpha_i + \omega_g\omega_w\cos{\beta})\\
 I_{z'''',z''''}(\alpha_g\cos{\beta}- \omega_i\omega_g\sin{\beta}-\omega_i\omega_w)
 \end{Bmatrix}
 \end{equation}
+\subsection{Vraag 3}
+\textbf{Bereken de kracht $\vec{F}_B$ uitgeoefent door het landingsgestel op het aanhechtingspunt met de vleugel.}
+\textbf{{\Large Hier moet nog een vrijlichaamdiagram komen}}
+\begin{equation}
+\dfrac{d\vec{p}}{dt} = \sum	\vec{F}	= \vec{F}_B + \vec{F}_W + \vec{G}
+\end{equation}\\
+\textbf{Voor het wiel geldt dan:}
+\begin{equation}
+\dfrac{d\vec{p}_W}{dt} = \vec{G}_W -\vec{F}_W
+\end{equation}
+\begin{equation}
+\vec{F}_W = \vec{G}_W - \dfrac{d\vec{p}_W}{dt}
+\end{equation}
+\textbf{Voor het landingsgestel in totaal geldt dan:}
+\begin{equation}
+\dfrac{d\vec{p}_D}{dt} 	= \vec{F}_B + \vec{F}_W + \vec{G}
+\end{equation}
+\begin{equation}
+\vec{F}_B = \dfrac{d\vec{p}_D}{dt} + \dfrac{d\vec{p}_W}{dt} - \vec{G}_D - \vec{G}_W
+\end{equation}
+\subsection{Vraag 4}
+\textbf{Bereken de moment $\vec{M}_B$ uitgeoefent door het landingsgestel op het aanhechtingspunt met de vleugel.}
+\begin{equation}
+\vec{M}_B = \dfrac{d\vec{L}_D}{dt} + \vec{r}_{B|D} \times m_{landingsgestel} \vec{a}_D
+\end{equation}
+\begin{equation}
+\vec{r}_{B|D} = T_2 * T1 * \vec{r''}_{B|D} = \begin{Bmatrix}
+\Big(\cos{\beta}\big(\frac{3}{4}l_3\sin(\beta) -\frac{1}{4}l_4\cos(\beta)\big) + \cos(\alpha)\sin(\beta)\big(-\frac{3}{4}l_3\cos(\beta) + \frac{1}{4}l_4\sin(\beta)\big)\Big) *\vec{e}_{x''}\\
+\Big(-\sin{\alpha}\big(-\frac{3}{4}l_3\sin(\beta) +\frac{1}{4}l_4\cos(\beta)\big)\Big)* \vec{e}_{y''}\\
+\Big(\sin{\beta}\big(-\frac{3}{4}l_3\sin(\beta) +\frac{1}{4}l_4\cos(\beta)\big) + \cos{\alpha}\cos{\beta}\big(-\frac{3}{4}l_3\sin(\beta) +\frac{1}{4}l_4\cos(\beta)\big)\Big)* \vec{e}_{z''}
+\end{Bmatrix}
+\end{equation}
+\textbf{Hier moeten dan nog enkele maple berekeningen ingevoerd worden.}
+\subsection{Vraag 5}
+\textbf{Het aandrijfmoment dat de actuator in het punt B moet leveren om het landingsgestel in te klappen.}
+\begin{equation}
+\vec{M}_B = \dfrac{d\vec{L}_B}{dt} + \vec{r}_{B|C} \times m_{wiel} \vec{a}_C + \dfrac{d\vec{L}_wiel}{dt}
+\end{equation}
+\begin{equation}
+\vec{r}_{B|C} = T_2 * T_1 * \vec{r''}_{B|C} =  \begin{Bmatrix}
+\Big(\cos{\beta}\big(l_3\sin(\beta) -l_4\cos(\beta)\big) + \cos(\alpha)\sin(\beta)\big(-l_3\cos(\beta) + l_4\sin(\beta)\big)\Big) *\vec{e}_{x''}\\
+-\sin{\alpha}\big(-l_3\cos(\beta) +l_4\sin(\beta)\big)* \vec{e}_{y''}\\
+\Big(\sin{\beta}\big(-l_3\sin(\beta) +l_4\cos(\beta)\big) + \cos{\alpha}\cos{\beta}\big(-l_3\cos(\beta) +l_4\sin(\beta)\big)\Big)* \vec{e}_{z''}
+\end{Bmatrix}
+\end{equation}
+\begin{equation}
+\vec{r}_{B|C} \times m_{wiel} \vec{a}_C 
+\end{equation}
+\textbf{Hier moeten nog enkele maple berekeningen volgen}
 \end{document}
