@@ -70,7 +70,7 @@ Joren \textsc{Dhont} % Your name
 %	LOGO SECTION
 %----------------------------------------------------------------------------------------
 \begin{center}
-\includegraphics{Logo.png}\\[1cm] % Include a department/university logo - this will require the graphicx package
+ \includegraphics{Logo.png}\\[1cm] % Include a department/university logo - this will require the graphicx package
 \end{center}
 %----------------------------------------------------------------------------------------
 
@@ -252,12 +252,12 @@ Voor de transformaties van de verschillende eenheidsvectoren leidden we volgende
 \end{equation}
 \begin{equation}
 	\begin{aligned}
-		\vec{\alpha}_g \times \vec{r}_{A|C(t.o.v x'y'z')}  &=  \begin{Vmatrix}
+		\vec{\alpha}_g \times \vec{r}_{A|C(t.o.v x'y'z')}  &=  \begin{vmatrix}
 			\vec{e}_{x'}& \vec{e}_{y'} & \vec{e}_{z'}\\
 			0 & 0 & \alpha_g \\		
 			\Big(l_1 - l_3 \sin(\beta) - l_4 \cos(\beta)\Big) &
 			0 & \Big (l_2 - l_3 \cos(\beta) + l_4 \sin(\beta) \Big) 
-		\end{Vmatrix}\\
+		\end{vmatrix}\\
 		&= \begin{Bmatrix}
 			0*\vec{e}_{x'}\\
 			\alpha_g \Big(l_1 - l_3 \sin(\beta) - l_4 \cos(\beta)\Big)*\vec{e}_{y'}\\
@@ -277,12 +277,12 @@ Voor de transformaties van de verschillende eenheidsvectoren leidden we volgende
 \end{equation}\\
 \begin{equation}
 	\begin{aligned}
-		\vec{\alpha}_i \times \vec{r}_{B|C(t.o.v x'y'z')}  &=  \begin{Vmatrix}
+		\vec{\alpha}_i \times \vec{r}_{B|C(t.o.v x'y'z')}  &=  \begin{vmatrix}
 			\vec{e}_{x'}& \vec{e}_{y'} & \vec{e}_{z'}\\
 			0 & \alpha_i & 0 \\		
 			\Big(- l_3 \sin(\beta) - l_4 \cos(\beta)\Big) &
 			0 & \Big (- l_3 \cos(\beta) + l_4 \sin(\beta) \Big) 
-		\end{Vmatrix}\\
+		\end{vmatrix}\\
 		&= \begin{Bmatrix}
 			\alpha_i \Big(- l_3 \cos(\beta) + l_4 \sin(\beta)\Big)*\vec{e}_{x'}\\
 			0*\vec{e}_{y'}\\
@@ -365,18 +365,18 @@ Voor de transformaties van de verschillende eenheidsvectoren leidden we volgende
 \end{equation}\\
 \textbf{De totale versnelling $\vec{a}_c$ is dan:}
 \begin{equation}
+\begin{aligned}
 	\begin{Bmatrix}
 		{\Big(\alpha_i*\Big( - l_3 \cos(\beta) + l_4 \sin(\beta)\Big) - \omega_g^{2}*\Big(l_1 - l_3 \sin(\beta) - l_4 \cos(\beta)\Big) +\omega_i^{2}*\Big(l_3 \sin(\beta) + l_4 \cos(\beta)\Big)\Big)*\vec{e}_{x}}\\
 		\Big(\alpha_g*\cos(\alpha)*\Big(l_1 - l_3 \sin(\beta) - l_4 \cos(\beta)\Big) - 	\alpha_i*\sin(\alpha)*\Big(l_3 \sin(\beta) + l_4 \cos(\beta)\Big) + \vec{a}_v*\cos(\alpha)\Big)*\vec{e}_{y}\\	
 		\Big(\alpha_g*\sin(\alpha)*\Big(l_1 - l_3 \sin(\beta) - l_4 \cos(\beta)\Big) + 	\alpha_i*\cos(\alpha)*\Big(l_3 \sin(\beta) + l_4 \cos(\beta)\Big)+\vec{a}_v*\sin(\alpha)\Big)*\vec{e}_{z} 
 	\end{Bmatrix} 
-\end{equation}\\
-\begin{equation}
-	+ \begin{Bmatrix}
+	+ \\ \begin{Bmatrix}
 		{0*\vec{e}_{x}}\\
 		\Big(\omega_g * \omega_i*\cos(\alpha)*\Big( - l_3 \cos(\beta) + l_4 \sin(\beta)\Big) + \omega_i^2*\sin(\alpha)*\Big( - l_3 \cos(\beta) + l_4 \sin(\beta)\Big)\Big) *\vec{e}_{y}\\
 		\Big(-\omega_g * \omega_i*\sin(\alpha)*\Big( - l_3 \cos(\beta) + l_4 \sin(\beta)\Big) - \omega_i^2*\cos(\alpha)*\Big( - l_3 \cos(\beta) + l_4 \sin(\beta)\Big)\Big)*\vec{e}_{z} 
 	\end{Bmatrix}
+\end{aligned}
 \end{equation}\\		
 
 \subsection{Vraag 3}
@@ -581,6 +581,11 @@ En tot slot de complementaire versnelling:
 \textbf{Bereken de ogenblikkelijke impulsvector en de verandering van de impulsvector van het landingsgestel en die van het wiel.}\\
 \begin{equation}
 \begin{aligned}
+	\vec{p}_c &= m *\vec{v}_c \\
+\end{aligned}
+\end{equation}
+\begin{equation}
+\begin{aligned}
 \vec{p}_d &= m *\vec{v}_d \\
 &= m * \begin{Bmatrix}
 \Big(\omega_i  (\frac{1}{4}l_4 \sin{\beta}-\frac{3}{4}l_3  \cos{\beta})\Big) * \vec{e}_{x}\\
@@ -589,6 +594,11 @@ En tot slot de complementaire versnelling:
 \end{Bmatrix}
 \end{aligned}
 \end{equation} 
+\begin{equation}
+\begin{aligned}
+	\big(\dfrac{d\vec{p}_c}{dt}\big) &= m *\vec{a}_c\\
+\end{aligned}
+\end{equation}
 \begin{equation}
 \begin{aligned}
 	\big(\dfrac{d\vec{p}_d}{dt}\big) &= m *\vec{a}_d\\
@@ -603,7 +613,7 @@ En tot slot de complementaire versnelling:
 \textbf{Bereken de ogenblikkelijke impulsmomentvector en de verandering van de impulsmometvector van het landingsgestel en die van het wiel rond hun respectievelijke massacentra.}
 \begin{equation}
 \begin{aligned}
-	\vec{L}_0 = I(t)\vec{\omega}
+	\vec{L}_c = I(t)\vec{\omega}
 \end{aligned}
 \end{equation}
 \begin{equation}
@@ -676,6 +686,26 @@ I_{x'''',x''''}(\alpha_w - \alpha_g \sin{\beta}+ (-\omega_i\omega_g))\cos{\beta}
 I_{y'''',y''''}(\alpha_i + \omega_g\omega_w\cos{\beta})\\
 I_{z'''',z''''}(\alpha_g\cos{\beta}- \omega_i\omega_g\sin{\beta}-\omega_i\omega_w)
 \end{Bmatrix}
+\end{equation}
+\begin{equation}
+\begin{aligned}
+\vec{L}_c = I(t)\vec{\omega}
+\end{aligned}
+\end{equation}
+\begin{equation}
+\begin{aligned}
+\vec{\omega} &=  \vec{\omega}_g + \vec{\omega}_i\\
+&= \begin{Bmatrix}
+( -\vec{\omega}_g sin(\beta))\vec{e}_{x''''}\\
+\vec{\omega}_i*\vec{e}_{y''''}\\
+\vec{\omega}_g cos{\beta}(\beta)\vec{e}_{z''''}
+\end{Bmatrix}\\
+&=\begin{Bmatrix}
+I_{\omega,x'''',x''''} ( -\vec{\omega}_g sin(\beta))\vec{e}_{x''''}\\
+I_{\omega,y'''',y''''}\vec{\omega}_i*\vec{e}_{y''''}\\
+I_{\omega,z'''',z''''}\vec{\omega}_g cos{\beta}(\beta)\vec{e}_{z''''}
+\end{Bmatrix}
+\end{aligned}
 \end{equation}
 \subsection{Vraag 3}
 \textbf{Bereken de kracht $\vec{F}_B$ uitgeoefent door het landingsgestel op het aanhechtingspunt met de vleugel.}
