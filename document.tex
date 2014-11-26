@@ -333,12 +333,12 @@ Voor de transformaties van de verschillende eenheidsvectoren leidden we volgende
 \end{equation}\\
 \begin{equation}
 	\begin{aligned}
-		\vec{\omega}_g \times \vec{r}_{A|B(t.o.v x'y'z')} =  \begin{Vmatrix}
+		\vec{\omega}_g \times \vec{r}_{A|B(t.o.v x'y'z')} =  \begin{vmatrix}
 			\vec{e}_{x'}& \vec{e}_{y'} & \vec{e}_{z'}\\
 			0 & 0 &  \omega_g \\		
 			l_1 &
 			0 & l_2
-		\end{Vmatrix}\\
+		\end{vmatrix}\\
 	\end{aligned}
 \end{equation}\\
 \begin{equation}
@@ -395,16 +395,21 @@ met $\vec{\omega}_{rel}$ = $\vec{\omega}_i$ en $\vec{r}_{c|b} = (-\sin{\beta}l_3
 \end{equation}
 \begin{equation}
 \begin{aligned}
-	Coriolisversnelling: 2*( \vec{v}_{rel} \times  \vec{\omega}) &= -2 *( \vec{\omega} \times \vec{v}_{rel})\\
-	&=2 * \begin{vmatrix}
+	Coriolisversnelling:\\ 2*( \vec{v}_{rel} \times  \vec{\omega}) &= -2 *( \vec{\omega} \times \vec{v}_{rel})\\
+	&=-2 * \begin{vmatrix}
 	\vec{e}_{x''} & \vec{e}_{y''} & \vec{e}_{z''}\\
 	0 & 0 & \omega_g \\
 	\omega_i  (l_4 \sin{\beta}-l_3  \cos{\beta}) & 0 & \omega_i l_4\cos{\beta} + l_3  \sin{\beta})
 	\end{vmatrix}\\
-	&= \begin{Bmatrix}
+	&=  \begin{Bmatrix}
 	0 * \vec{e}_{x'}\\
-	\Big(2\omega_g\omega_i(l_4 \sin{\beta}-l_3  \cos{\beta})\Big)*\vec{e}_{y'}\\
+	\Big(-2\omega_g\omega_i(l_4 \sin{\beta}-l_3  \cos{\beta})\Big)*\vec{e}_{y'}\\
 	0 * \vec{e}_{z'}\\
+	\end{Bmatrix}\\
+	&= \begin{Bmatrix}
+		0 * \vec{e}_{x}\\
+		\Big(-2\omega_g\omega_i(l_4 \sin{\beta}-l_3  \cos{\beta})\Big)*\cos{\beta}*\vec{e}_{y}\\
+		\Big(-2\omega_g\omega_i(l_4 \sin{\beta}-l_3  \cos{\beta})\Big)*\cos{\beta} * \vec{e}_{z}\\
 	\end{Bmatrix}
 \end{aligned}
 \end{equation}
@@ -624,12 +629,14 @@ En tot slot de complementaire versnelling:
 \vec{\omega}_i*\vec{e}_{y''''}\\
 \vec{\omega}_g cos{\beta}(\beta)\vec{e}_{z''''}
 \end{Bmatrix}\\
-&=\begin{Bmatrix}
+\end{aligned}
+\end{equation}
+\begin{equation}
+\vec{L}_c=\begin{Bmatrix}
 I_{\omega,x'''',x''''} (-\vec{\omega}_w -\vec{\omega}_g sin(\beta))\vec{e}_{x''''}\\
 I_{\omega,y'''',y''''}\vec{\omega}_i*\vec{e}_{y''''}\\
 I_{\omega,z'''',z''''}\vec{\omega}_g cos{\beta}(\beta)\vec{e}_{z''''}
 \end{Bmatrix}
-\end{aligned}
 \end{equation}
 \begin{equation}
 \begin{aligned}
@@ -689,7 +696,7 @@ I_{z'''',z''''}(\alpha_g\cos{\beta}- \omega_i\omega_g\sin{\beta}-\omega_i\omega_
 \end{equation}
 \begin{equation}
 \begin{aligned}
-\vec{L}_c = I(t)\vec{\omega}
+\vec{L}_d = I(t)\vec{\omega}
 \end{aligned}
 \end{equation}
 \begin{equation}
@@ -700,12 +707,33 @@ I_{z'''',z''''}(\alpha_g\cos{\beta}- \omega_i\omega_g\sin{\beta}-\omega_i\omega_
 \vec{\omega}_i*\vec{e}_{y''''}\\
 \vec{\omega}_g cos{\beta}(\beta)\vec{e}_{z''''}
 \end{Bmatrix}\\
-&=\begin{Bmatrix}
-I_{\omega,x'''',x''''} ( -\vec{\omega}_g sin(\beta))\vec{e}_{x''''}\\
-I_{\omega,y'''',y''''}\vec{\omega}_i*\vec{e}_{y''''}\\
-I_{\omega,z'''',z''''}\vec{\omega}_g cos{\beta}(\beta)\vec{e}_{z''''}
-\end{Bmatrix}
 \end{aligned}
+\end{equation}
+\begin{equation}
+\vec{L}_d=\begin{Bmatrix}
+I_{\omega,x''',x'''} ( -\vec{\omega}_g sin(\beta))\vec{e}_{x'''}\\
+I_{\omega,y''',y'''}\vec{\omega}_i*\vec{e}_{y'''}\\
+I_{\omega,z''',z'''}\vec{\omega}_g cos{\beta}(\beta)\vec{e}_{z'''}
+\end{Bmatrix}
+\end{equation}
+\begin{equation}
+\begin{aligned}
+	\Big(\dfrac{d\vec{L}_d}{dt}\Big) &= \Big(\dfrac{d\vec{L}_d}{dt}\Big)_{rel} + \Omega \times \vec{L}_d\\
+\end{aligned}
+\end{equation}
+\textbf{We berekenen nu eerst $\Big(\dfrac{d\vec{L}_d}{dt}\Big)_{rel}$.}
+\begin{equation}
+	\begin{aligned}
+		\Big(\dfrac{d\vec{L}_d}{dt}\Big)_{rel} &= I \vec{\omega}\\
+		&= I * \begin{Bmatrix}
+		(-\alpha_g \sin{\beta} - \omega_i\omega_g\cos{\beta})\vec{e}_{x'''}\\
+		\alpha_i\vec{e}_{y''}\\
+		(\alpha_g\cos{\beta}-\omega_i\omega_g\sin{\beta})\vec{e}_{z'''}
+		\end{Bmatrix}
+	\end{aligned}
+\end{equation}
+\begin{equation}
+\Omega \times \vec{v}_d
 \end{equation}
 \subsection{Vraag 3}
 \textbf{Bereken de kracht $\vec{F}_B$ uitgeoefent door het landingsgestel op het aanhechtingspunt met de vleugel.}

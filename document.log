@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.11.1)  25 NOV 2014 21:48
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.11.1)  26 NOV 2014 07:52
 entering extended mode
 **document.tex
 (C:\Users\User\Case\document.tex
@@ -643,18 +643,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 352--353
  []
 
 
-Overfull \hbox (26.7131pt too wide) detected at line 373
-[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 373--374
-
- []
-
-
-Overfull \hbox (4.84465pt too wide) detected at line 380
-\OT1/cmr/m/n/10 + []
+Overfull \hbox (37.82416pt too wide) detected at line 380
+[] []
  []
 
 
@@ -663,12 +653,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 380--381
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 413--415
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 421--423
+Underfull \hbox (badness 10000) in paragraph at lines 418--420
 
  []
 
@@ -678,88 +663,93 @@ Underfull \hbox (badness 10000) in paragraph at lines 426--428
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 435--437
+Underfull \hbox (badness 10000) in paragraph at lines 431--433
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 435--437
+Underfull \hbox (badness 10000) in paragraph at lines 440--442
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 451--453
+Underfull \hbox (badness 10000) in paragraph at lines 440--442
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 468--470
+Underfull \hbox (badness 10000) in paragraph at lines 456--458
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 473--475
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 476--478
+Underfull \hbox (badness 10000) in paragraph at lines 481--483
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 484--486
+Underfull \hbox (badness 10000) in paragraph at lines 489--491
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 490--493
+Underfull \hbox (badness 10000) in paragraph at lines 495--498
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 527--528
+Underfull \hbox (badness 10000) in paragraph at lines 532--533
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 581--582
+Underfull \hbox (badness 10000) in paragraph at lines 586--587
 
  []
 
 
-Overfull \hbox (1.21616pt too wide) detected at line 591
+Overfull \hbox (1.21616pt too wide) detected at line 601
 [] []
  []
 
 [7]
-Overfull \hbox (17.44579pt too wide) detected at line 601
+Overfull \hbox (17.44579pt too wide) detected at line 616
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 652--654
+Underfull \hbox (badness 10000) in paragraph at lines 669--671
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 667--668
+Underfull \hbox (badness 10000) in paragraph at lines 684--685
 
  []
 
 
-Overfull \hbox (12.59268pt too wide) detected at line 679
+Overfull \hbox (12.59268pt too wide) detected at line 696
 [][][] \OT1/cmr/m/n/10 = [] + []
  []
 
-
-Overfull \hbox (47.54716pt too wide) detected at line 711
+[9]
+Overfull \hbox (47.54716pt too wide) detected at line 769
 [] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 T[] \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 T
 \OT1/cmr/m/n/10 1 \OMS/cmsy/m/n/10  [][] \OT1/cmr/m/n/10 = []
  []
 
 
-Overfull \hbox (19.04431pt too wide) detected at line 724
+Overfull \hbox (19.04431pt too wide) detected at line 782
 [] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 T[] \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 T
 [] \OMS/cmsy/m/n/10  [][] \OT1/cmr/m/n/10 = []
  []
 
-[9] [10] (C:\Users\User\Case\document.aux) ) 
+[10] (C:\Users\User\Case\document.aux) ) 
 Here is how much of TeX's memory you used:
  4319 strings out of 493921
  56759 string characters out of 3144879
@@ -768,21 +758,21 @@ Here is how much of TeX's memory you used:
  7422 words of font info for 27 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  37i,18n,43p,409b,267s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmsy5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmsy7.pfb>
-Output written on document.pdf (11 pages, 197970 bytes).
+<C:/Program Files (x86)/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmmi5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmsy5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
+y7.pfb>
+Output written on document.pdf (11 pages, 198712 bytes).
 PDF statistics:
  93 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
