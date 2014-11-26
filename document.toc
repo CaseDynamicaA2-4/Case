@@ -9,5 +9,6 @@
 \contentsline {subsection}{\numberline {2.1}Vraag 1}{8}
 \contentsline {subsection}{\numberline {2.2}Vraag 2}{9}
 \contentsline {subsection}{\numberline {2.3}Vraag 3}{11}
-\contentsline {subsection}{\numberline {2.4}Vraag 4}{11}
-\contentsline {subsection}{\numberline {2.5}Vraag 5}{11}
+\contentsline {subsection}{\numberline {2.4}Vraag 4}{12}
+\contentsline {subsection}{\numberline {2.5}Vraag 5}{12}
+\contentsline {section}{\numberline {3}Besluit}{12}
